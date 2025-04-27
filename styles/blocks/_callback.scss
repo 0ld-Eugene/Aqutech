@@ -1,0 +1,314 @@
+.callback {
+   padding-top: 100px;
+   padding-bottom: 100px;
+
+   // .callback__container
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 55px;
+   }
+   @media (max-width: 1440px) {
+      &__container {
+         column-gap: 84px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__container {
+         flex-direction: column;
+         column-gap: 0px;
+         row-gap: 40px;
+      }
+   }
+
+   // .callback__left-side
+
+   &__left-side {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 925px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+         font-size: inherit;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__left-side {
+         font-size: 16px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__left-side {
+         font-size: 12px;
+         flex-basis: auto;
+         flex-grow: 1;
+         flex-shrink: 1;
+      }
+   }
+
+   // .callback__content
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+   }
+   @media (max-width: 1440px) {
+      &__content {
+         gap: 20px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__content {
+         gap: 12px;
+      }
+   }
+
+   // .callback__title
+
+   &__title {
+      font-size: 40px;
+   }
+   @media (max-width: 1440px) {
+      &__title {
+         font-size: 32px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__title {
+         font-size: 24px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__title {
+         font-size: 22px;
+      }
+   }
+
+   // .callback__text
+
+   &__text {
+   }
+
+   // .callback__right-side
+
+   &__right-side {
+      width: 100%;
+      max-width: 660px;
+   }
+   @media (max-width: 834px) {
+      &__right-side {
+         max-width: 100%;
+      }
+   }
+
+   // .callback__form
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+   &__form > div > input {
+      width: 100%;
+      padding: 24px;
+      border-radius: 72px;
+      border: 1.2px solid var(--accent-color);
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+      box-sizing: border-box;
+      font-size: 16.8px;
+      &:focus {
+         outline: none;
+         border: 1.2px solid var(--btn-hover-color);
+         background-color: var(--bg-color);
+      }
+      &::placeholder {
+         // color: var(--text-color);
+         color: rgba(47, 47, 47, 0.8);
+         font-weight: 500;
+         line-height: 120%; /* 20.16px */
+         font-size: inherit;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__form > div > input {
+         font-size: 16px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__form > div > input {
+         font-size: 14px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__form > div > input {
+         font-size: 12px;
+      }
+   }
+
+   // .callback__name
+
+   &__name {
+   }
+   &__name input {
+      display: flex;
+      width: 100%;
+   }
+
+   // .callback__group
+
+   &__group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+   }
+   &__group > input {
+      flex-grow: 1;
+      flex-basis: 0;
+   }
+   @media (max-width: 600px) {
+      &__group {
+         flex-wrap: wrap;
+         margin-bottom: 12px;
+      }
+      &__group > input {
+         flex-basis: auto;
+      }
+   }
+
+   // .callback__policy
+
+   &__policy {
+      display: flex;
+      margin-bottom: 12px;
+      font-size: 14.4px;
+      span {
+         font-family: Mulish;
+         font-size: inherit;
+         line-height: 120%; /* 28px */
+      }
+   }
+   @media (max-width: 390px) {
+      &__policy {
+         font-size: 12px;
+      }
+   }
+   &__policy label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      span {
+         padding-left: 42px;
+      }
+   }
+   &__policy label::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid var(--accent-color);
+      cursor: pointer;
+      transition:
+         background-color 0.3s ease,
+         border-color 0.3s ease;
+   }
+
+   &__policy input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+   }
+   &__policy input[type="checkbox"]:checked + span::before {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+   }
+   &__policy input[type="checkbox"]:checked + span::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: -2px;
+      width: 7px;
+      height: 24px;
+      border: solid var(--btn-hover-color);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+   }
+   @media (max-width: 931px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: 7px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: -10px;
+      }
+   }
+   @media (max-width: 691px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: -2px;
+      }
+   }
+   @media (max-width: 432px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: 5px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: -4px;
+      }
+   }
+   @media (max-width: 372px) {
+      &__policy input[type="checkbox"]:checked + span::after {
+         top: 2px;
+      }
+   }
+
+   // .callback__button
+
+   &__button {
+      width: 100%;
+      button {
+         width: 100%;
+         padding: 24px 72px;
+         border-radius: 72px;
+      }
+   }
+   &__button > button > span {
+      color: var(--secondary-color);
+      font-family: Mulish;
+      font-size: 16.8px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+   }
+   @media (max-width: 1440px) {
+      &__button > button > span {
+         font-size: 16px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__button > button > span {
+         font-size: 12px;
+      }
+   }
+}
+@media (max-width: 834px) {
+   .callback {
+      padding-bottom: 80px;
+      padding-top: 80px;
+   }
+}
+@media (max-width: 390px) {
+   .callback {
+      padding-bottom: 60px;
+      padding-top: 60px;
+   }
+}

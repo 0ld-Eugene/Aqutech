@@ -1,0 +1,449 @@
+.hero {
+   padding-top: 75px;
+   padding-bottom: 100px;
+
+   // .hero__container
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   // .hero__main
+
+   &__main {
+      padding-bottom: 20px;
+      justify-content: space-between;
+      display: flex;
+      column-gap: 35px;
+   }
+   @media (max-width: 834px) {
+      &__main {
+         column-gap: 15px;
+         padding-bottom: 70px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__main {
+         padding-bottom: 30px;
+      }
+   }
+
+   // .hero__box
+
+   &__box {
+      width: 100%;
+   }
+
+   // .hero__img
+
+   &__img {
+      max-width: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+         width: 100%;
+         height: auto;
+         // object-fit: cover;
+      }
+   }
+
+   // .hero__title
+
+   &__title {
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+      max-width: 1178px;
+      font-size: 85px; //24
+      @include fluid-text(85, 24);
+   }
+   @media (max-width: 834px) {
+      &__title {
+         padding-top: 45px;
+         padding-bottom: 20px;
+      }
+   }
+
+   // .hero__img-wrap
+
+   &__image-wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      max-width: 380px;
+   }
+
+   // .hero__image
+
+   &__image {
+      max-width: 380px;
+   }
+
+   // .hero__subtitle
+
+   &__subtitle {
+      padding-bottom: 80px;
+      font-size: 32px;
+      @include fluid-text(32, 12);
+      p > span {
+         display: block;
+      }
+   }
+   @media (max-width: 834px) {
+      &__subtitle {
+         padding-bottom: 0px;
+      }
+   }
+
+   // .hero__offerings
+
+   &__offerings {
+   }
+}
+
+@media (max-width: 1440px) {
+   .hero {
+      padding-top: 50px;
+   }
+}
+@media (max-width: 834px) {
+   .hero {
+      padding-bottom: 80px;
+   }
+}
+
+.offerings {
+   display: flex;
+   column-gap: 20px;
+   justify-content: space-between;
+
+   // .offerings__box
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+
+   // .offerings__left
+
+   &__left {
+      padding-left: 15px;
+   }
+
+   // .offerings__right
+
+   &__right {
+      align-items: flex-end;
+   }
+
+   // .offerings__item
+
+   &__item {
+      position: relative;
+      line-height: 120%; /* 19.2px */
+      white-space: nowrap;
+      width: fit-content;
+      &::before {
+         position: absolute;
+         content: "";
+         top: 0;
+         left: 0;
+         width: 9px;
+         height: 8px;
+         background-color: var(--btn-hover-color);
+         border-radius: 50%;
+         transform: translate(-14px, 5px);
+      }
+   }
+
+   /*----------------item-left-------------------*/
+
+   .item-left:nth-child(1) {
+      margin-top: 67px;
+      left: calc((498px - ((498px - 226px) / (1920px - 834px)) * (1920px - 100vw)) - 10px);
+   }
+   .item-left:nth-child(2) {
+      margin-top: 19px;
+      left: calc(120px - ((120px - 54px) / (1920px - 834px)) * (1920px - 100vw));
+   }
+   .item-left:nth-child(3) {
+      margin-top: 62px;
+      left: calc(300px - ((300px - 183px) / (1920px - 834px)) * (1920px - 100vw));
+   }
+   .item-left:nth-child(4) {
+      margin-top: 15px;
+   }
+
+   // *---------------@media--------------------
+   // *-------------.item-left------------------
+
+   @media (max-width: 1440px) {
+      &__item {
+         font-size: 14px;
+      }
+      .item-left:nth-child(1) {
+         margin-top: 23px;
+      }
+      .item-left:nth-child(2) {
+         margin-top: 19px;
+      }
+      .item-left:nth-child(3) {
+         margin-top: 38px;
+         left: 45%;
+      }
+      .item-left:nth-child(4) {
+         margin-top: 29px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__item {
+         font-size: 12px;
+      }
+      .item-left:nth-child(1) {
+         //Фильтры
+         order: 1;
+         margin-top: 17px;
+      }
+      .item-left:nth-child(2) {
+         //Ультрафильтрация
+         order: 0;
+         margin-top: 19px;
+      }
+      .item-left:nth-child(3) {
+         //Механическая очистка
+         order: 3;
+         margin-top: 30px;
+      }
+      .item-left:nth-child(4) {
+         //Стеклопластик
+         order: 2;
+         margin-top: 15px;
+      }
+   }
+   @media (max-width: 660px) {
+      .item-left:nth-child(n) {
+         margin-top: 12px;
+         left: 0px;
+      }
+      .item-left:nth-child(1) {
+         //Фильтры
+         order: 0;
+      }
+      .item-left:nth-child(2) {
+         //Ультрафильтрация
+         order: 2;
+      }
+      .item-left:nth-child(3) {
+         //Механическая очистка
+         order: 3;
+      }
+      .item-left:nth-child(4) {
+         //Стеклопластик
+         order: 1;
+      }
+   }
+
+   /*----------------item-right-------------------*/
+
+   .item-right:nth-child(1) {
+      margin-top: 24px;
+      right: 0;
+   }
+   .item-right:nth-child(2) {
+      margin-top: 48px;
+      right: 60%;
+   }
+   .item-right:nth-child(3) {
+      margin-top: 30px;
+      right: 10%;
+   }
+   .item-right:nth-child(4) {
+      margin-top: 28px;
+      right: 60%;
+   }
+
+   // *---------------@media--------------------
+   // *-------------.item-right------------------
+
+   @media (max-width: 1440px) {
+      .item-right:nth-child(2) {
+         margin-top: 15px;
+      }
+      .item-right:nth-child(3) {
+         margin-top: 42px;
+      }
+      .item-right:nth-child(4) {
+         margin-top: 39px;
+         right: 40%;
+      }
+   }
+   @media (max-width: 834px) {
+      //Блоки дозирования
+      .item-right:nth-child(1) {
+         order: 3;
+         margin-top: 27px;
+         right: 110px;
+      }
+      .item-right:nth-child(2) {
+         //Насосы
+         order: 1;
+         margin-top: 25px;
+         right: 69%;
+      }
+      .item-right:nth-child(3) {
+         //Биологическая загрузка
+         order: 0;
+         margin-top: 17px;
+         right: 0;
+      }
+      .item-right:nth-child(4) {
+         //Насосное оборудование
+         order: 2;
+         margin-top: 17px;
+         right: 0;
+      }
+   }
+   @media (max-width: 660px) {
+      .item-right:nth-child(n) {
+         margin-top: 12px;
+         left: 0px;
+      }
+      //Блоки дозирования
+      .item-right:nth-child(1) {
+         order: 1;
+      }
+      .item-right:nth-child(2) {
+         //Насосы
+         order: 0;
+      }
+      .item-right:nth-child(3) {
+         //Биологическая загрузка
+         order: 3;
+      }
+      .item-right:nth-child(4) {
+         //Насосное оборудование
+         order: 2;
+      }
+   }
+   @media (max-width: 600px) {
+      .item-right:nth-child(n),
+      .item-left:nth-child(n) {
+         margin-top: 0;
+      }
+   }
+
+   // .offerings__button
+
+   &__button {
+   }
+
+   &__button button {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+
+      span {
+         color: #f4f8ff;
+         font-size: 24px;
+         font-weight: 500;
+         line-height: 100%;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__button button {
+         width: 200px;
+         height: 200px;
+         span {
+            font-size: 16px;
+         }
+      }
+   }
+   @media (max-width: 834px) {
+      &__button button {
+         width: 160px;
+         height: 160px;
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .hero {
+      padding-top: 45px;
+   }
+   .hero__main {
+      padding-bottom: 20px;
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 20px;
+   }
+   .hero__img {
+      display: none;
+   }
+   .hero__title {
+      padding-top: 0;
+      padding-bottom: 12px;
+   }
+   .hero__image-wrap {
+      max-width: 100%;
+   }
+   .hero__image {
+      max-width: 100%;
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+   .offerings {
+      flex-wrap: wrap;
+      row-gap: 12px;
+   }
+   .offerings__box {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 37px;
+      padding-left: 15px;
+   }
+
+   .offerings__left {
+      order: 1;
+   }
+   .offerings__right {
+      order: 2;
+   }
+   .offerings__button {
+      width: 100%;
+      order: 0;
+      margin-bottom: 18px;
+      button {
+         width: 100%;
+         height: 100%;
+         padding: 18px 10px;
+         border-radius: 4px;
+         span {
+            font-size: 12px;
+         }
+      }
+   }
+}
+@media (max-width: 376px) {
+   .hero {
+      padding-bottom: 50px;
+   }
+   .offerings__box {
+      display: none;
+   }
+}
+
+.hidden-text {
+   display: none;
+}
+@media (max-width: 834px) {
+   .hidden-text {
+      display: block;
+   }
+   .visible-text {
+      display: none;
+   }
+}

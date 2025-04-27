@@ -1,0 +1,219 @@
+.services {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   // .services__container
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 60px;
+   }
+   @media (max-width: 1440px) {
+      &__container {
+         row-gap: 50px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__container {
+         row-gap: 20px;
+      }
+   }
+
+   // .services__content
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 100px;
+   }
+   @media (max-width: 834px) {
+      &__content {
+         flex-direction: column;
+         column-gap: 0px;
+         row-gap: 30px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__content {
+         row-gap: 20px;
+      }
+   }
+
+   // .services__title
+
+   &__title {
+      width: 100%;
+      h2 {
+         font-size: 70px;
+         font-weight: 700;
+         line-height: 80%; /* 43.2px */
+         margin-left: 51%;
+         h2 {
+            font-size: inherit;
+         }
+      }
+      @media (max-width: 1740px) {
+         h2 {
+            margin-left: 52%;
+         }
+      }
+      @media (max-width: 1440px) {
+         h2 {
+            font-size: 54px;
+            margin-left: 55%;
+         }
+      }
+      @media (max-width: 834px) {
+         h2 {
+            margin-left: 0;
+            font-size: 40px;
+         }
+      }
+      @media (max-width: 390px) {
+         h2 {
+            font-size: 22px;
+         }
+      }
+   }
+
+   // .services__left
+
+   &__left {
+      display: flex;
+      flex: 1 1 auto;
+      max-width: 660px;
+      flex-direction: column;
+      gap: 26px;
+      p {
+         line-height: 120%;
+         font-size: 32px;
+      }
+      @media (max-width: 1440px) {
+         p {
+            font-size: 24px;
+         }
+      }
+      @media (max-width: 834px) {
+         p {
+            font-size: 16px;
+         }
+      }
+      @media (max-width: 390px) {
+         p {
+            font-size: 14px;
+         }
+      }
+   }
+
+   // .services__image
+
+   &__image {
+      // margin-top: 120px;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 402px;
+   }
+   @media (max-width: 834px) {
+      &__image {
+         display: none;
+      }
+   }
+   &__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   // .services__right
+
+   &__right {
+      display: flex;
+      flex: 0 1 800px;
+      flex-direction: column;
+      gap: 63px;
+   }
+   @media (max-width: 834px) {
+      &__right {
+         max-height: 636px;
+         flex-basis: auto;
+      }
+   }
+
+   // .services__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+   @media (max-width: 834px) {
+      &__list {
+         row-gap: 15px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__list {
+         row-gap: 10px;
+      }
+   }
+
+   // .services__item
+
+   &__item {
+      border-top: 1px solid #d7d7d7;
+      border-bottom: 1px solid #d7d7d7;
+      display: flex;
+   }
+   &__item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      column-gap: 20px;
+   }
+   @media (max-width: 834px) {
+      &__item a {
+         padding-top: 12px;
+         padding-bottom: 12px;
+      }
+   }
+   &__item a:hover svg {
+      transform: rotate(45deg);
+   }
+   &__item a > svg {
+      transition: transform 0.2s ease-in-out;
+   }
+   &__item span {
+      display: inline-flex;
+      font-family: Raleway;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 24px */
+   }
+   @media (max-width: 1440px) {
+      &__item span {
+         font-size: 16px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__item span {
+         font-size: 12px;
+      }
+   }
+}
+@media (max-width: 834px) {
+   .services {
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+}
+@media (max-width: 390px) {
+   .services {
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+}
