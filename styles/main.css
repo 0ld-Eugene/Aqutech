@@ -428,6 +428,7 @@ svg * {
 
 .burger {
   display: none;
+  bottom: -60px;
   cursor: pointer;
   height: 40px;
   border: none;
@@ -438,7 +439,7 @@ svg * {
   border-radius: 6px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14);
   transform: none;
-  transition: transform 0.3 ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .burger__line {
   width: 28px;
@@ -447,7 +448,7 @@ svg * {
   background-color: var(--btn-hover-color);
   display: block;
   transform: none;
-  transition: transform 0.3 ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (max-width: 1050px) {
@@ -472,6 +473,7 @@ svg * {
   transform: rotate(-45deg) translate(2px, -3px);
 }
 
+/*-----------------------------------*/
 .header-wrapper {
   position: relative;
   z-index: 9999;
