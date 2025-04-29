@@ -44,13 +44,8 @@
    &__title {
       width: 100%;
       h2 {
-         font-size: 70px;
-         font-weight: 700;
-         line-height: 80%; /* 43.2px */
          margin-left: 51%;
-         h2 {
-            font-size: inherit;
-         }
+         @include title-size;
       }
       @media (max-width: 1740px) {
          h2 {
@@ -59,19 +54,12 @@
       }
       @media (max-width: 1440px) {
          h2 {
-            font-size: 54px;
             margin-left: 55%;
          }
       }
       @media (max-width: 834px) {
          h2 {
             margin-left: 0;
-            font-size: 40px;
-         }
-      }
-      @media (max-width: 390px) {
-         h2 {
-            font-size: 22px;
          }
       }
    }

@@ -2,15 +2,21 @@
    font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
 
-@mixin reset-link {
-   color: inherit;
-
-   &,
-   &:hover {
-      text-decoration: none;
+@mixin title-size { 
+   font-size: 70px;
+   @media screen and (max-width: 1440px) {
+      font-size: 54px;
+   }
+   @media screen and (max-width: 834px) {
+      font-size: 40px;
+   }
+   @media screen and (max-width: 600px) {
+      font-size: 36px;
+   }
+   @media screen and (max-width: 390px) {
+      font-size: 22px;
    }
 }
-
 
 @mixin reset-button {
    padding: 0;

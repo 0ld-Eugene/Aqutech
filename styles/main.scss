@@ -38,6 +38,13 @@
       padding-top: 60px;
    }
 }
+#overlay.active {
+   opacity: 1;
+   pointer-events: auto;
+}
+.wrapper {
+   background-color: var(--bg-color);
+}
 
 .bg-color {
    background: var(--bg-color-secondary);
@@ -91,18 +98,9 @@
    transition: opacity 0.3s ease-in-out;
    pointer-events: none;
 }
-#overlay.active {
-   opacity: 1;
-   pointer-events: auto;
-}
-.wrapper {
-   background-color: var(--bg-color);
-}
 
 .repeat-section {
    padding-top: 100px;
    padding-bottom: 100px;
 }
-* {
-   box-sizing: border-box;
-}
+

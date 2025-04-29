@@ -23,22 +23,7 @@
    // .advantages__title
 
    &__title {
-      font-size: 70px;
-   }
-   @media (max-width: 1440px) {
-      &__title {
-         font-size: 54px;
-      }
-   }
-   @media (max-width: 900px) {
-      &__title {
-         font-size: 40px;
-      }
-   }
-   @media (max-width: 390px) {
-      &__title {
-         font-size: 22px;
-      }
+      @include title-size;
    }
 
    // .advantages__list

@@ -89,6 +89,11 @@ menuItem.addEventListener('mouseenter', () => {
 const swiper = new Swiper('.swiper', {
    slidesPerView: 'auto',
    spaceBetween: 'auto',
+   // loop: true,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+   },
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

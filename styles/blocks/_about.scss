@@ -11,7 +11,7 @@
    }
    @media (max-width: 834px) {
       &__container {
-         gap: 100px;
+         gap: 80px;
       }
    }
 
@@ -50,22 +50,7 @@
    // .about__title
 
    &__title {
-      font-size: 70px;
-   }
-   @media (max-width: 1440px) {
-      &__title {
-         font-size: 54px;
-      }
-   }
-   @media (max-width: 834px) {
-      &__title {
-         font-size: 40px;
-      }
-   }
-   @media (max-width: 390px) {
-      &__title {
-         font-size: 22px;
-      }
+      @include title-size;
    }
 
    // .about__text
@@ -120,7 +105,7 @@
 @media (max-width: 834px) {
    .about {
       padding-top: 80px;
-      padding-bottom: 80px;
+      padding-bottom: 60px;
    }
 }
 @media (max-width: 390px) {
@@ -137,29 +122,9 @@
 
    // .customers__title
 
-   &__title {
-      font-size: 70px;
-      h2 {
-         line-height: 80%;
-         font-size: inherit;
-      }
+   &__title h2 {
+      @include title-size;
    }
-   @media (max-width: 1440px) {
-      &__title {
-         font-size: 54px;
-      }
-   }
-   @media (max-width: 834px) {
-      &__title {
-         font-size: 40px;
-      }
-   }
-   @media (max-width: 390px) {
-      &__title {
-         font-size: 22px;
-      }
-   }
-   // .customers__wrapper
 
    &__wrapper {
    }
@@ -167,40 +132,14 @@
    // .customers__list
 
    &__list {
-      // display: flex;
-      // column-gap: 47px;
    }
-
-   // &__list ul {
-   //    display: grid;
-   //    grid-template-columns: repeat(4, 1fr);
-   //    gap: 47px;
-   // }
 
    // .customers__item
 
    &__item {
-      // display: flex;
-      // flex-direction: column;
-      // row-gap: 40px;
    }
-   // @media (max-width: 1440px) {
-   //    &__list {
-   //       height: auto;
-   //    }
-   //    &__list ul {
-   //       display: block !important;
-   //       width: 100%;
-   //    }
-   //    &__list ul.swiper-wrapper {
-   //       overflow-x: hidden;
-   //    }
-   // }
    &__img {
       margin-bottom: 40px;
-      // display: flex;
-      // row-gap: 40px;
-      // height: 97px; // высота элемента
    }
 }
 
@@ -220,34 +159,27 @@
 .swiper-wrapper {
 }
 .swiper-slide {
-   // width: calc((100vw / 4) - 120px) !important;
 }
 
-// .swiper-slide {
-//    width: calc((100% / 4));
-//    box-sizing: border-box;
-//    text-align: center;
-//    margin-right: 1rem;
-// }
+/* Основной стиль для кнопок */
+.swiper-button-next,
+.swiper-button-prev {
+   font-size: 1rem; /* Исходный размер шрифта иконок */
+   color: red; /* Основной цвет иконок */
+   opacity: 0.5; /* Полупрозрачность */
+   transition: all 0.3s ease-in-out;
+   transform: scale(0.5); /* Масштабируем иконки в половину исходного размера */
+}
 
-// .swiper-button-next,
-// .swiper-button-prev {
-//    color: #e7a1a1;
-// }
+/* Эффекты при наведении */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+   opacity: 1;
+   transform: scale(0.6); /* Немного увеличенный масштаб при наведении */
+}
 
-// @media (min-width: 1441px) {
-//    .customers__list ul {
-//       display: grid;
-//       grid-template-columns: repeat(4, 1fr);
-//       gap: 47px;
-//    }
-// }
-
-// @media (max-width: 1440px) {
-//    .customers__list ul {
-//       display: none;
-//    }
-//    .swiper-container {
-//       display: block;
-//    }
-// }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+   font-size: 1rem; /* Размер шрифта уменьшается примерно в два раза */
+   color: red; /* Красный цвет иконок */
+}
