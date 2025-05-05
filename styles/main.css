@@ -793,32 +793,6 @@ svg * {
   gap: clamp(1.313rem, -2.25rem + 3.96vw, 2.5rem);
   align-items: center;
 }
-.right-panel__search button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  background: var(--secondary-color);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14);
-  color: var(--accent-color);
-  transition: box-shadow 0.3s ease-in-out;
-}
-@media (max-width: 1050px) {
-  .right-panel__search button {
-    padding: 10px;
-  }
-}
-.right-panel__search button:hover {
-  box-shadow: 0px 0px 2px 1px var(--accent-color);
-}
-.right-panel__search button svg {
-  transition: transform 0.3s ease-in-out;
-}
-.right-panel__search button:hover svg {
-  transform: scale(1.1);
-}
 .right-panel__phone {
   color: var(--text-color);
   font-size: clamp(16px, 1.0416666667vw, 20px);
@@ -879,10 +853,8 @@ svg * {
     gap: 6px;
   }
 }
-.search-input {
-  display: none;
-}
-
+/*-----------------1 option------------------*/
+/*-----------------2 option------------------*/
 .hero {
   padding-top: 75px;
   padding-bottom: 100px;
@@ -2281,6 +2253,162 @@ svg * {
     padding-bottom: 60px;
   }
 }
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--btn-color);
+  color: var(--bg-color-secondary);
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 115px;
+}
+@media (max-width: 1440px) {
+  .footer__container {
+    row-gap: 90px;
+  }
+}
+@media (max-width: 1100px) {
+  .footer__container {
+    row-gap: 50px;
+  }
+}
+.footer__logo {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 85px;
+  font-weight: 800;
+  line-height: 105%; /* 90.069px */
+  text-transform: uppercase;
+}
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: end;
+  width: 100%;
+}
+@media (max-width: 760px) {
+  .footer__body {
+    flex-direction: column;
+    align-items: start;
+    column-gap: 0px;
+    row-gap: 40px;
+  }
+}
+.footer__inner {
+  display: flex;
+  flex-basis: 820px;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+@media (max-width: 1440px) {
+  .footer__inner {
+    flex-basis: 675px;
+  }
+}
+@media (max-width: 1100px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: end;
+    column-gap: 0px;
+    row-gap: 50px;
+  }
+}
+@media (max-width: 760px) {
+  .footer__inner {
+    flex-basis: auto;
+    row-gap: 30px;
+  }
+}
+.footer__email {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.footer__email header {
+  font-size: 24px;
+}
+.footer__email a {
+  display: inline-block;
+  position: relative;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 80%; /* 56px */
+  z-index: 3;
+}
+@media (max-width: 1440px) {
+  .footer__email header {
+    font-size: 16px;
+  }
+  .footer__email a {
+    font-size: 40px;
+  }
+}
+@media (max-width: 390px) {
+  .footer__email header {
+    font-size: 12px;
+  }
+  .footer__email a {
+    font-size: 32px;
+  }
+}
+.footer__email a::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: -3;
+}
+.footer__email a:hover::after {
+  transform: scaleX(1);
+}
+.footer__name, .footer__policy {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 80%; /* 33.6px */
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+@media (max-width: 1440px) {
+  .footer__name, .footer__policy {
+    font-size: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .footer__name, .footer__policy {
+    row-gap: 16px;
+  }
+}
+@media (max-width: 390px) {
+  .footer__name, .footer__policy {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .footer {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 834px) {
+  .footer {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 390px) {
+  .footer {
+    padding-top: 5 0px;
+    padding-bottom: 50px;
+  }
+}
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
@@ -2381,6 +2509,10 @@ svg * {
 .repeat-section {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.svg {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

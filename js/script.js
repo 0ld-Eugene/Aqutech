@@ -1,32 +1,56 @@
-// // Тест бургера
-// document.getElementById('burger-btn').addEventListener('click', function(){
-//    this.classList.toggle('active');
-//    document.getElementById('menu-navigation').classList.toggle('active');
+
+// document.addEventListener('DOMContentLoaded', function () {
+//    const searchButton = document.getElementById("searchButton");
+//    const searchInput = document.getElementById("searchInput");
+
+//    searchButton.addEventListener('click', () => {
+//       if (!searchInput.classList.contains("show-search-input")) {
+//          searchInput.classList.add("show-search-input");
+//          searchButton.classList.add("hide-search-button")
+//       } else {
+//          searchInput.classList.remove("show-search-input");
+//          searchButton.classList.remove("hide-search-button")
+//       }
+//       searchInput.focus()
+//    })
 // })
 
-//Замена текста в элементе
-function truncateText() {
-   const components = document.getElementById('components');
+// document.addEventListener('DOMContentLoaded', function () {
+//    const searchButton = document.getElementById("searchButton");
+//    const searchInput = document.getElementById("searchInput");
 
-   if (window.innerWidth <= 540) {
-      components.textContent = 'Комплектующие';
-   } else {
-      components.textContent = 'Комлектующие и расходные материалы';
-   };
-}
-window.addEventListener('resize', truncateText);
-window.addEventListener('load', truncateText);
+//    // Нажатие на кнопку поиска
+//    searchButton.addEventListener("click", () => {
+//       toggleSearch();
+//    });
+
+//    // Потеря фокуса на input
+//    searchInput.addEventListener("blur", () => {
+//       setTimeout(() => {
+//          if (!searchInput.value.trim()) {
+//             toggleSearch();
+//          }
+//       }, 100);
+//    });
+
+//    // Функция переключения состояния
+//    function toggleSearch() {
+//       if (searchInput.classList.contains("active")) {
+//          searchInput.classList.remove("active");
+//          searchButton.classList.remove("hidden");
+//       } else {
+//          searchInput.classList.add("active");
+//          searchButton.classList.add("hidden");
+//          searchInput.focus(); // Фокусируем поле
+//       }
+//    }
+// });
 
 // Кнопка бургера
 document.querySelector('.burger').addEventListener('click', function () {
    this.classList.toggle('active');
    // document.querySelector('.menu__body').classList.toggle('active');
 });
-
-//? Вычисления что бы понять значение font-size
-// const parentElement = document.querySelector('.active');
-// const fontSize = window.getComputedStyle(parentElement).getPropertyValue('font-size')
-// console.log(fontSize)
 
 //? dropdown-equipment
 const equipmentButtons = document.querySelectorAll('.left-side__button');
@@ -123,27 +147,11 @@ const swiper = new Swiper('.swiper', {
    }
 })
 
-// document.addEventListener('DOMContentLoaded', function () {
-//    const customersList = document.querySelector('.customers__list');
 
-//    if (customersList && window.innerWidth <= 1440) {
-//       new Swiper(customersList, {
-//          slidePerView: 'auto',
-//          spaceBetween: 40,
-//          breakpoints: {
-//             1440: {
-//                slidesPerView: 3,
-//             },
-//          },
-//          navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev'
-//          },
-//       });
-//    }
-// });
-
-
+//? Вычисления что бы понять значение font-size
+// const parentElement = document.querySelector('.active');
+// const fontSize = window.getComputedStyle(parentElement).getPropertyValue('font-size')
+// console.log(fontSize)
 
 
 

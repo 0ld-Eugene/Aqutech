@@ -331,9 +331,8 @@
 
                         <!-- Форма поиска -->
 
-                        <div class="right-panel__search search-container">
-                           <input class="search-input" type="text" placeholder="Поиск"></input>
-                           <button class="search-button" type="button" aria-label="Поиск">
+                        <!-- <div class="right-panel__search search-container">
+                           <button class="search-button" id="searchButton" type="button" aria-label="Поиск">
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 22"
                                  fill="none">
                                  <path
@@ -346,9 +345,9 @@
                                     d="M15.6538 15.6538C15.9467 15.3609 16.4216 15.3609 16.7145 15.6538L20.9571 19.8964C21.25 20.1893 21.25 20.6642 20.9571 20.9571C20.6642 21.25 20.1894 21.25 19.8965 20.9571L15.6538 16.7145C15.3609 16.4216 15.3609 15.9467 15.6538 15.6538Z"
                                     fill="#005BAC" />
                               </svg>
-                           </button>
-                        </div>
-
+                           </button> 
+                           <input class="search-input" id="searchInput" type="text" placeholder="Поиск"></input>
+                        </div> -->
                         <!-- Номер телефона и ссылка на форму-->
 
                         <div class="right-panel__phone">
@@ -766,7 +765,7 @@
       </main>
       <div id="overlay"></div>
       <div class="svg">
-         <svg style="display: none;">
+         <svg>
             <symbol id="icon-arrow">
                <path
                   d="M-1.63706e-05 1.66668C-1.63706e-05 2.10871 0.175579 2.53263 0.488139 2.84519C0.8007 3.15776 1.22462 3.33335 1.66665 3.33335H14.3167L0.483317 17.15C0.169477 17.4639 -0.00683594 17.8895 -0.00683594 18.3333C-0.00683593 18.7772 0.169477 19.2028 0.483317 19.5167C0.797157 19.8305 1.22281 20.0068 1.66665 20.0068C2.11049 20.0068 2.53614 19.8305 2.84998 19.5167L16.6667 5.68335V18.3333C16.6667 18.7754 16.8422 19.1993 17.1548 19.5119C17.4674 19.8244 17.8913 20 18.3333 20C18.7753 20 19.1993 19.8244 19.5118 19.5119C19.8244 19.1993 20 18.7754 20 18.3333V1.66668C19.9974 1.44889 19.9521 1.23372 19.8667 1.03335C19.6975 0.626101 19.3739 0.302473 18.9667 0.133348C18.7663 0.0479464 18.5511 0.00264809 18.3333 1.47811e-05H1.66665C1.22462 1.47811e-05 0.8007 0.175608 0.488139 0.488169C0.175579 0.80073 -1.63706e-05 1.22465 -1.63706e-05 1.66668Z"
@@ -779,7 +778,27 @@
       <!--? ------Footer------ -->
 
       <footer class="footer">
-
+         <div class="footer__container">
+            <div class="footer__logo">
+               logo
+            </div>
+            <div class="footer__body">
+               <div class="footer__email">
+                  <header>Email</header>
+                  <a href="#">uf.udin@yandex.ru</a>
+               </div>
+               <div class="footer__inner">
+                  <div class="footer__name">
+                     <div>ИП Юдин Андрей Вячеславович</div>
+                     <div>ОГРНИП 321645100012611</div>
+                  </div>
+                  <div class="footer__policy">
+                     <header>Политика конфиденциальности</header>
+                     <div>© 2025. Системы очистки воды</div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </footer>
    </div>
    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>

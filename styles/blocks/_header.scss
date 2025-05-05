@@ -464,34 +464,34 @@
 
    // .right-panel__search
 
-   &__search {
-      button {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         padding: 12px;
-         flex-shrink: 0;
-         border-radius: 6px;
-         background: var(--secondary-color);
-         box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14);
-         color: var(--accent-color);
-         transition: box-shadow 0.3s ease-in-out;
-      }
-      @media (max-width: 1050px) {
-         button {
-            padding: 10px;
-         }
-      }
-      button:hover {
-         box-shadow: 0px 0px 2px 1px var(--accent-color);
-      }
-      button svg {
-         transition: transform 0.3s ease-in-out;
-      }
-      button:hover svg {
-         transform: scale(1.1);
-      }
-   }
+   // &__search {
+   //    button {
+   //       display: flex;
+   //       justify-content: center;
+   //       align-items: center;
+   //       padding: 12px;
+   //       flex-shrink: 0;
+   //       border-radius: 6px;
+   //       background: var(--secondary-color);
+   //       box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14);
+   //       color: var(--accent-color);
+   //       transition: box-shadow 0.3s ease-in-out;
+   //    }
+   //    @media (max-width: 1050px) {
+   //       button {
+   //          padding: 10px;
+   //       }
+   //    }
+   //    button:hover {
+   //       box-shadow: 0px 0px 2px 1px var(--accent-color);
+   //    }
+   //    button svg {
+   //       transition: transform 0.3s ease-in-out;
+   //    }
+   //    button:hover svg {
+   //       transform: scale(1.1);
+   //    }
+   // }
 
    // .right-panel__phone
 
@@ -561,7 +561,48 @@
       gap: 6px;
    }
 }
+// .search-input {
+//    display: none;
+// }
+/*-----------------1 option------------------*/
+// .show-search-input {
+//    display: block !important;
+// }
+// .hide-search-button {
+//    display: none !important;
+// }
+/*-----------------2 option------------------*/
+// /* Основной блок поиска */
+// .right-panel__search {
+//    position: relative;
+//    display: inline-block; /* Чтобы сохранялась строковая позиция */
+// }
 
-.search-input {
-   display: none;
-}
+// .search-input {
+//    display: none;
+//    opacity: 0;
+//    transform: translateY(-10px); /* Сначала перемещено вверх */
+//    transition: transform 0.5s ease; /* Оба эффекта вместе */
+// }
+
+// .search-input.active {
+//    display: block;
+//    transform: translateY(0); /* Появляется внизу */
+//    opacity: 1; /* Полностью видно */
+// }
+
+// .search-button.hidden {
+//    opacity: 0;
+//    transform: translateY(10px); /* Кнопка постепенно спускается вниз */
+//    pointer-events: none; /* Нельзя нажать */
+//    transition:
+//       transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+//       opacity 0.3s linear; /* Все эффекты сглаживаются */
+// }
+
+// /* Остальные медиа-запросы остаются прежними */
+// @media (max-width: 1050px) {
+//    .search-input {
+//       font-size: 14px;
+//    }
+// }
