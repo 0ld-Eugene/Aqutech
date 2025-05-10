@@ -64,12 +64,12 @@
       }
    }
 
-
    // .hero__img-wrap
 
    &__image-wrap {
       display: flex;
       flex-direction: column-reverse;
+      transform: translateX(-1px);
       max-width: 380px;
    }
 

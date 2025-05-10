@@ -32,6 +32,16 @@
       line-height: 105%; /* 90.069px */
       text-transform: uppercase;
    }
+   @media (max-width: 834px) {
+      &__logo {
+         font-size: 50px;
+      }
+   }
+   @media (max-width: 390px) {
+      &__logo {
+         font-size: 30px;
+      }
+   }
 
    // .footer__body
 
@@ -155,7 +165,7 @@
          row-gap: 16px;
       }
    }
-   @media (max-width: 390px) {
+   @media (max-width: 430px) {
       &__name,
       &__policy {
          font-size: 14px;

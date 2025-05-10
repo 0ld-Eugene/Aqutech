@@ -164,22 +164,23 @@
 /* Основной стиль для кнопок */
 .swiper-button-next,
 .swiper-button-prev {
+   top: auto !important;
+   bottom: 0 !important;
    font-size: 1rem; /* Исходный размер шрифта иконок */
    color: red; /* Основной цвет иконок */
    opacity: 0.5; /* Полупрозрачность */
    transition: all 0.3s ease-in-out;
-   transform: scale(0.5); /* Масштабируем иконки в половину исходного размера */
+   transform: scale(0.3); /* Масштабируем иконки в половину исходного размера */
 }
 
 /* Эффекты при наведении */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
    opacity: 1;
-   transform: scale(0.6); /* Немного увеличенный масштаб при наведении */
+   transform: scale(0.5); /* Немного увеличенный масштаб при наведении */
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-   font-size: 1rem; /* Размер шрифта уменьшается примерно в два раза */
    color: red; /* Красный цвет иконок */
 }
