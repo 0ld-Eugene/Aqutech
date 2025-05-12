@@ -656,37 +656,44 @@ svg * {
   position: absolute;
   max-width: 1640px;
   padding: 50px;
-  display: flex !important;
-  column-gap: 110px;
+  column-gap: 10px;
   border-radius: 0px 0px 20px 20px;
   background: #fff;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
-  width: 100%;
+  width: auto;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 .dropdown-equipment__left {
   max-width: 508px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 1;
 }
 .dropdown-equipment__right {
   max-width: 922px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-grow: 0;
 }
-@media (max-width: 1350px) {
+
+@media (max-width: 1440px) {
   .dropdown-equipment {
-    transform: translateX(-40%);
+    padding: 40px;
   }
-}
-@media (max-width: 1200px) {
-  .dropdown-equipment {
-    transform: translateX(-35%);
+  .dropdown-equipment__right {
+    max-width: 716px;
   }
 }
 .left-side__menu {
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+@media (max-width: 1440px) {
+  .left-side__menu {
+    gap: 45px;
+  }
 }
 .left-side__item {
   margin-left: 17px;
@@ -706,22 +713,32 @@ svg * {
   background-color: var(--accent-color);
   border-radius: 50%;
 }
+@media (max-width: 1440px) {
+  .left-side__item {
+    font-size: 14px;
+  }
+}
 .left-side__button {
   background-color: transparent;
   padding: 0;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+.left-side__button span {
   position: relative;
 }
-.left-side__button::after {
+.left-side__button span::after {
   position: absolute;
   content: "";
+  width: 0;
   left: 0;
   bottom: -4px;
-  width: 0;
   height: 1px;
   background-color: var(--btn-hover-color);
   transition: width 0.2s ease-in;
 }
-.left-side__button.active::after {
+.left-side__button.active span::after {
   width: 100%;
 }
 
@@ -729,10 +746,14 @@ svg * {
   display: none;
 }
 .right-side__items {
-  display: flex;
+  display: inline-flex;
   gap: 20px 23px;
   flex-wrap: wrap;
-  width: 100%;
+}
+@media (max-width: 1440px) {
+  .right-side__items {
+    gap: 10px;
+  }
 }
 .right-side__item {
   max-width: 292px;
@@ -746,12 +767,25 @@ svg * {
   padding-bottom: 14px;
   font-size: 18px;
 }
+@media (max-width: 1440px) {
+  .right-side__item h4 {
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+}
 .right-side__item:hover {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
 }
 .right-side__item img {
   border-radius: 20px;
   overflow: hidden;
+}
+@media (max-width: 1440px) {
+  .right-side__item img {
+    border-radius: 10px;
+    height: 100px;
+    width: 190px;
+  }
 }
 
 .right-side .active {

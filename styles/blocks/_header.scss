@@ -273,28 +273,27 @@
 /*-----------------.dropdown-equipment------------------*/
 
 .dropdown-equipment {
-   // opacity: 0;
-   // visibility: hidden;
    transition:
       opacity 0.3s ease,
       visibility 0.3s ease;
    position: absolute;
    max-width: 1640px;
    padding: 50px;
-   column-gap: 110px;
+   column-gap: 10px;
    border-radius: 0px 0px 20px 20px;
    background: #fff;
    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
-   width: 100%;
+   width: auto;
+   left: 15px;
+   right: 15px;
+   display: flex;
+   justify-content: space-between;
 
    // .dropdown-equipment__left
 
-   //! на 1670 делать адаптив
-
    &__left {
       max-width: 508px;
-      // flex-basis: 508px;
-      flex-shrink: 0;
+      flex-shrink: 1;
       flex-grow: 1;
    }
 
@@ -302,32 +301,21 @@
 
    &__right {
       max-width: 922px;
-      // flex-basis: 922px;
-      flex-shrink: 0;
+      flex-shrink: 1;
       flex-grow: 0;
    }
-   @media (max-width: 1730px) {
-      &__right {
-         // flex-basis: 716px;
-      }
-   }
 }
-// @media (max-width: 1730px) {
-//    .dropdown-equipment {
-//       padding: 40px;
-//       column-gap: 45px;
-//    }
-// }
-@media (max-width: 1350px) {
+//!!! На 1100px делать бургер
+
+@media (max-width: 1440px) {
    .dropdown-equipment {
-      transform: translateX(-40%);
+      padding: 40px;
+   }
+   .dropdown-equipment__right {
+      max-width: 716px;
    }
 }
-@media (max-width: 1200px) {
-   .dropdown-equipment {
-      transform: translateX(-35%);
-   }
-}
+
 .left-side {
    // .left-side__menu
 
@@ -336,9 +324,9 @@
       flex-direction: column;
       gap: 60px;
    }
-   @media (max-width: 1730px) {
+   @media (max-width: 1440px) {
       &__menu {
-         // gap: 40px;
+         gap: 45px;
       }
    }
 
@@ -362,33 +350,36 @@
          border-radius: 50%;
       }
    }
-   // @media (max-width: 1730px) {
-   //    &__item {
-   //       font-size: 14px;
-   //       &::before {
-   //          top: 5px;
-   //       }
-   //    }
-   // }
+   @media (max-width: 1440px) {
+      &__item {
+         font-size: 14px;
+      }
+   }
+
    // .left-side__button
 
    &__button {
       background-color: transparent;
       padding: 0;
-      position: relative;
-   }
-   &__button::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1px;
-      background-color: var(--btn-hover-color);
-      transition: width 0.2s ease-in;
+      text-align: left;
+      border: none;
+      outline: none;
+      span {
+         position: relative;
+      }
+      span::after {
+         position: absolute;
+         content: "";
+         width: 0;
+         left: 0;
+         bottom: -4px;
+         height: 1px;
+         background-color: var(--btn-hover-color);
+         transition: width 0.2s ease-in;
+      }
    }
 
-   &__button.active::after {
+   &__button.active span::after {
       width: 100%;
    }
 }
@@ -402,16 +393,16 @@
    // .right-side__items
 
    &__items {
-      display: flex;
+      display: inline-flex;
       gap: 20px 23px;
       flex-wrap: wrap;
-      width: 100%;
+      // width: 100%;
    }
-   // @media (max-width: 1730px) {
-   //    &__items {
-   //       gap: 10px;
-   //    }
-   // }
+   @media (max-width: 1440px) {
+      &__items {
+         gap: 10px;
+      }
+   }
 
    // .right-side__item
 
@@ -426,28 +417,28 @@
          padding-bottom: 14px;
          font-size: 18px;
       }
+      @media (max-width: 1440px) {
+         h4 {
+            padding-bottom: 10px;
+            font-size: 14px;
+         }
+      }
       &:hover {
          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
       }
-      // @media (max-width: 1730px) {
-      //    h4 {
-      //       font-size: 14px;
-      //       padding-bottom: 10px;
-      //    }
-      // }
    }
    &__item {
       img {
          border-radius: 20px;
          overflow: hidden;
       }
-      // @media (max-width: 1730px) {
-      //    img {
-      //       border-radius: 10px;
-      //       height: 100px;
-      //       width: 190px;
-      //    }
-      // }
+      @media (max-width: 1440px) {
+         img {
+            border-radius: 10px;
+            height: 100px;
+            width: 190px;
+         }
+      }
    }
 }
 .right-side .active {

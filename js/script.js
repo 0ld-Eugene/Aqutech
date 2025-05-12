@@ -60,7 +60,7 @@ let hideTimer = null;
 const hideDropdown = () => {
    hideTimer = setTimeout(() => {
       equipmentDropdown.style.display = 'none';
-   }, 150);
+   }, 200);
 };
 
 // Показываем dropdown без задержки
