@@ -419,11 +419,31 @@ svg * {
 }
 
 .button {
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  column-gap: 6px;
   background-color: var(--btn-color);
   transition: background 0.4s ease-in-out;
 }
+.button span {
+  color: #f4f8ff;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 71%; /* 9.94px */
+}
+.button svg {
+  transition: transform 0.3s ease;
+}
 .button:hover {
   background-color: var(--btn-hover-color);
+}
+.button:hover svg {
+  transform: rotate(180deg);
 }
 
 .burger {
@@ -451,7 +471,7 @@ svg * {
   transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .burger {
     display: block;
   }
@@ -502,7 +522,6 @@ svg * {
   justify-content: space-between;
   align-items: center;
   column-gap: 60px;
-  position: relative;
   z-index: 5;
 }
 @media (max-width: 1200px) {
@@ -529,10 +548,9 @@ svg * {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: relative;
   z-index: 5;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .header__menu {
     justify-content: flex-end;
     width: fit-content;
@@ -566,21 +584,72 @@ svg * {
   position: relative;
   z-index: 5;
 }
-@media (max-width: 1050px) {
+.menu .burger__logo {
+  display: none;
+  margin-bottom: 22px;
+}
+.menu .burger__logo span {
+  display: block;
+  width: 100%;
+  align-self: center;
+  color: var(--accent-color);
+  font-family: Mulish;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 105%; /* 37.8px */
+  text-transform: uppercase;
+}
+.menu .burger__discuss {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.menu .close-svg {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+@media (max-width: 1100px) {
   .menu__body {
-    display: none;
+    background-color: var(--bg-color-secondary);
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 30px;
+    padding-left: 35px;
+    transform: translateY(100px);
+    transition: right 0.3s ease-in-out;
+  }
+  .menu__body.active {
+    right: 0;
+  }
+  .menu .burger__logo {
+    display: block;
+  }
+  .menu .burger__discuss {
+    display: block;
+  }
+  .menu .close-svg {
+    display: block;
   }
 }
 .menu__item {
   padding: 10px 0;
   position: relative;
   font-size: inherit;
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: auto;
-  z-index: 5;
 }
-.menu__item::before {
+.menu__item:hover .dropdown-direction, .menu__item:hover .dropdown-equipment, .menu__item:hover .dropdown-services {
+  opacity: 1;
+  visibility: visible;
+}
+.menu__item > a::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -592,12 +661,23 @@ svg * {
   border-top: 6px solid var(--accent-color);
   transition: 0.5s ease;
 }
-.menu__item:hover::before {
+.menu__item:hover > a::after {
   transform: rotate(180deg);
 }
-.menu__item:hover .dropdown-direction, .menu__item:hover .dropdown-equipment, .menu__item:hover .dropdown-services {
-  opacity: 1;
-  visibility: visible;
+@media (max-width: 1100px) {
+  .menu__item {
+    padding: 0;
+    display: flex;
+    flex-shrink: 1;
+  }
+  .menu__item a::after {
+    right: auto;
+    top: 8px;
+    transform: translateX(5px);
+  }
+  .menu__item:hover > a::after {
+    transform: rotate(180deg) translateX(-5px);
+  }
 }
 .dropdown-direction {
   opacity: 0;
@@ -652,8 +732,9 @@ svg * {
 
 /*-----------------.dropdown-equipment------------------*/
 .dropdown-equipment {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   max-width: 1640px;
   padding: 50px;
   column-gap: 10px;
@@ -663,8 +744,11 @@ svg * {
   width: auto;
   left: 15px;
   right: 15px;
-  display: flex;
-  justify-content: space-between;
+  opacity: 0; /* Непрозрачный по умолчанию */
+  max-height: 0; /* Нет доступной высоты */
+  overflow: hidden; /* Ничего не вылезает за границы */
+  pointer-events: none; /* Пользователь не сможет кликнуть */
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* Время плавного перехода */
 }
 .dropdown-equipment__left {
   max-width: 508px;
@@ -677,12 +761,23 @@ svg * {
   flex-grow: 0;
 }
 
+.dropdown-equipment.is-open {
+  opacity: 1; /* Полностью видимый */
+  max-height: 628px; /* Раскрывается до максимума */
+  pointer-events: auto; /* Пользователь может взаимодействовать */
+}
+
 @media (max-width: 1440px) {
   .dropdown-equipment {
     padding: 40px;
   }
   .dropdown-equipment__right {
     max-width: 716px;
+  }
+}
+@media (max-width: 1100px) {
+  .dropdown-equipment {
+    display: none;
   }
 }
 .left-side__menu {
@@ -869,7 +964,7 @@ svg * {
 .right-panel__phone a:hover {
   text-decoration: underline;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .right-panel__phone {
     display: none;
   }
@@ -917,8 +1012,6 @@ svg * {
     font-size: 14px;
   }
 }
-/*-----------------1 option------------------*/
-/*-----------------2 option------------------*/
 .hero {
   padding-top: 75px;
   padding-bottom: 100px;
@@ -2518,11 +2611,6 @@ svg * {
     padding-top: 60px;
   }
 }
-#overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .wrapper {
   background-color: var(--bg-color);
 }
@@ -2580,6 +2668,11 @@ svg * {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .repeat-section {

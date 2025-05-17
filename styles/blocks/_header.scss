@@ -27,7 +27,7 @@
       transition: transform 0.3s ease-in-out;
    }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
    .burger {
       display: block;
    }
@@ -83,7 +83,7 @@
       justify-content: space-between;
       align-items: center;
       column-gap: 60px;
-      position: relative;
+      // position: relative;
       z-index: 5;
    }
    @media (max-width: 1200px) {
@@ -119,10 +119,10 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      position: relative;
+      // position: relative;
       z-index: 5;
    }
-   @media (max-width: 1050px) {
+   @media (max-width: 1100px) {
       &__menu {
          justify-content: flex-end;
          width: fit-content;
@@ -167,9 +167,67 @@
       position: relative;
       z-index: 5;
    }
-   @media (max-width: 1050px) {
+   .burger__logo {
+      display: none;
+      margin-bottom: 22px;
+      span {
+         display: block;
+         width: 100%;
+         // padding: 0 30px;
+         align-self: center;
+         color: var(--accent-color);
+         font-family: Mulish;
+         font-size: 36px;
+         font-style: normal;
+         font-weight: 800;
+         line-height: 105%; /* 37.8px */
+         text-transform: uppercase;
+      }
+      img {
+      }
+   }
+   .burger__discuss {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+   }
+
+   .close-svg {
+      display: none;
+      position: absolute;
+      right: 40px;
+      top: 10px;
+   }
+
+   @media (max-width: 1100px) {
       &__body {
-         display: none;
+         background-color: var(--bg-color-secondary);
+         position: absolute;
+         width: 50%;
+         height: 100vh;
+         right: -100%;
+         top: 0;
+         flex-direction: column;
+         gap: 24px;
+         padding-top: 30px;
+         padding-left: 35px;
+         transform: translateY(100px);
+         transition: right 0.3s ease-in-out;
+      }
+      // .menu__body.active
+      
+      &__body.active {
+         right: 0;
+      }
+      .burger__logo {
+         display: block;
+      }
+      .burger__discuss {
+         display: block;
+      }
+      .close-svg {
+         display: block;
       }
    }
 
@@ -179,30 +237,41 @@
       padding: 10px 0;
       position: relative;
       font-size: inherit;
-      flex-shrink: 0;
-      flex-grow: 0;
-      flex-basis: auto;
-      z-index: 5;
-      &::before {
-         content: "";
-         position: absolute;
-         top: 17px;
-         right: -11px;
-         width: 0;
-         height: 0;
-         border-left: 3px solid transparent;
-         border-right: 3px solid transparent;
-         border-top: 6px solid var(--accent-color);
-         transition: 0.5s ease;
-      }
-      &:hover::before {
-         transform: rotate(180deg);
-      }
       &:hover .dropdown-direction,
       &:hover .dropdown-equipment,
       &:hover .dropdown-services {
          opacity: 1;
          visibility: visible;
+      }
+   }
+   &__item > a::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: -11px;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 6px solid var(--accent-color);
+      transition: 0.5s ease;
+   }
+   &__item:hover > a::after {
+      transform: rotate(180deg);
+   }
+   @media (max-width: 1100px) {
+      &__item {
+         padding: 0;
+         display: flex;
+         flex-shrink: 1;
+      }
+      &__item a::after {
+         right: auto;
+         top: 8px;
+         transform: translateX(5px);
+      }
+      &__item:hover > a::after {
+         transform: rotate(180deg) translateX(-5px);
       }
    }
 
@@ -273,10 +342,25 @@
 /*-----------------.dropdown-equipment------------------*/
 
 .dropdown-equipment {
-   transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
+   // transition:
+   //    opacity 0.3s ease,
+   //    visibility 0.3s ease;
+   // position: absolute;
+   // max-width: 1640px;
+   // padding: 50px;
+   // column-gap: 10px;
+   // border-radius: 0px 0px 20px 20px;
+   // background: #fff;
+   // box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
+   // width: auto;
+   // left: 15px;
+   // right: 15px;
+   // display: none;
+   // justify-content: space-between;
+
    position: absolute;
+   display: flex;
+   justify-content: space-between;
    max-width: 1640px;
    padding: 50px;
    column-gap: 10px;
@@ -286,8 +370,13 @@
    width: auto;
    left: 15px;
    right: 15px;
-   display: flex;
-   justify-content: space-between;
+   opacity: 0; /* Непрозрачный по умолчанию */
+   max-height: 0; /* Нет доступной высоты */
+   overflow: hidden; /* Ничего не вылезает за границы */
+   pointer-events: none; /* Пользователь не сможет кликнуть */
+   transition:
+      opacity 0.3s ease,
+      max-height 0.3s ease; /* Время плавного перехода */
 
    // .dropdown-equipment__left
 
@@ -305,7 +394,11 @@
       flex-grow: 0;
    }
 }
-//!!! На 1100px делать бургер
+.dropdown-equipment.is-open {
+   opacity: 1; /* Полностью видимый */
+   max-height: 628px; /* Раскрывается до максимума */
+   pointer-events: auto; /* Пользователь может взаимодействовать */
+}
 
 @media (max-width: 1440px) {
    .dropdown-equipment {
@@ -313,6 +406,11 @@
    }
    .dropdown-equipment__right {
       max-width: 716px;
+   }
+}
+@media (max-width: 1100px) {
+   .dropdown-equipment {
+      display: none;
    }
 }
 
@@ -377,10 +475,9 @@
          background-color: var(--btn-hover-color);
          transition: width 0.2s ease-in;
       }
-   }
-
-   &__button.active span::after {
-      width: 100%;
+      &.active span::after {
+         width: 100%;
+      }
    }
 }
 .right-side {
@@ -573,11 +670,13 @@
       }
    }
 
-   @media (max-width: 1050px) {
+   @media (max-width: 1100px) {
       &__phone {
          display: none;
       }
    }
+
+   // .right-panel__discuss
 
    &__discuss {
       @include fluid-text(20, 14);
@@ -624,48 +723,3 @@
       font-size: 14px;
    }
 }
-// .search-input {
-//    display: none;
-// }
-/*-----------------1 option------------------*/
-// .show-search-input {
-//    display: block !important;
-// }
-// .hide-search-button {
-//    display: none !important;
-// }
-/*-----------------2 option------------------*/
-// /* Основной блок поиска */
-// .right-panel__search {
-//    position: relative;
-//    display: inline-block; /* Чтобы сохранялась строковая позиция */
-// }
-
-// .search-input {
-//    display: none;
-//    opacity: 0;
-//    transform: translateY(-10px); /* Сначала перемещено вверх */
-//    transition: transform 0.5s ease; /* Оба эффекта вместе */
-// }
-
-// .search-input.active {
-//    display: block;
-//    transform: translateY(0); /* Появляется внизу */
-//    opacity: 1; /* Полностью видно */
-// }
-
-// .search-button.hidden {
-//    opacity: 0;
-//    transform: translateY(10px); /* Кнопка постепенно спускается вниз */
-//    pointer-events: none; /* Нельзя нажать */
-//    transition:
-//       transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-//       opacity 0.3s linear; /* Все эффекты сглаживаются */
-// }
-
-// /* Остальные медиа-запросы остаются прежними */
-// @media (max-width: 1050px) {
-//    .search-input {
-//       font-size: 14px;
-//    }
-// }

@@ -66,9 +66,30 @@
    line-height: 140%; /* 28px */
 }
 .button {
+   border-radius: 6px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 16px;
+   column-gap: 6px;
+   span {
+      color: #f4f8ff;
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 71%; /* 9.94px */
+   }
+   svg {
+      transition: transform 0.3s ease;
+   }
+
    background-color: var(--btn-color);
    transition: background 0.4s ease-in-out;
    &:hover {
       background-color: var(--btn-hover-color);
+   }
+   &:hover svg {
+      transform: rotate(180deg);
    }
 }

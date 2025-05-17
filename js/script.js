@@ -46,30 +46,148 @@
 //    }
 // });
 
-// Кнопка бургера
-document.querySelector('.burger').addEventListener('click', function () {
-   this.classList.toggle('active');
-   // document.querySelector('.menu__body').classList.toggle('active');
+// // Кнопка бургера
+// document.querySelector('.burger').addEventListener('click', function () {
+//    this.classList.toggle('active');
+//    const menuBody = document.querySelector('.menu__body');
+//    menuBody.classList.toggle('active');
+// });
+// // Закрытие меню по иконке
+// document.querySelector('.close-svg').addEventListener('click', () => {
+//    const menuBody = document.querySelector('.menu__body');
+//    if (menuBody.classList.contains('active')) {
+//       menuBody.classList.remove('active');
+//    }
+// });
+
+const burgerButton = document.querySelector('.burger');
+const closeIcon = document.querySelector('.close-svg');
+const menuBody = document.querySelector('.menu__body');
+
+// Обработчик события для открытия меню
+burgerButton.addEventListener('click', function () {
+   this.classList.toggle('active');       // переключаем активный класс у кнопки бургера
+   menuBody.classList.toggle('active');   // переключаем активный класс у тела меню
 });
+
+// Обработчик события для закрытия меню по иконке 'x'
+closeIcon.addEventListener('click', function () {
+   removeActiveClasses();                // удаляем классы active у обоих элементов
+});
+
+// Функция удаления классов active
+function removeActiveClasses() {
+   burgerButton.classList.remove('active');
+   menuBody.classList.remove('active');
+}
+
+// Обработчик кликов вне меню
+document.addEventListener('click', function (event) {
+   // Проверяем, кликнули ли вне меню и вне самого бургера
+   if (!menuBody.contains(event.target) && event.target !== burgerButton) {
+      removeActiveClasses();              // если клик вне меню и бургера, удаляем классы active
+   }
+});
+
+// //? dropdown-equipment
+
+// const equipmentItem = document.querySelector('.menu__item-equipment');
+// const equipmentDropdown = document.querySelector('.dropdown-equipment');
+// let hideTimer = null;
+
+// // Функция для скрытия dropdown с задержкой
+// const hideDropdown = () => {
+//    hideTimer = setTimeout(() => {
+//       equipmentDropdown.style.display = 'none';
+//    }, 200);
+// };
+
+// // Показываем dropdown без задержки
+// equipmentItem.addEventListener('mouseenter', () => {
+//    clearTimeout(hideTimer);
+//    equipmentDropdown.style.display = 'flex';
+// });
+
+// // При уходе с пункта меню
+// equipmentItem.addEventListener('mouseleave', (e) => {
+//    const related = e.relatedTarget;
+//    const isMovingToDropdown = related?.closest('.dropdown-equipment');
+
+//    if (!isMovingToDropdown) {
+//       hideDropdown();
+//    }
+// });
+
+// // При уходе с dropdown
+// equipmentDropdown.addEventListener('mouseleave', (e) => {
+//    const related = e.relatedTarget;
+//    const isMovingToItem = related?.closest('.menu__item-equipment');
+
+//    if (!isMovingToItem) {
+//       hideDropdown();
+//    }
+// });
+
+// // Отменяем скрытие при новом наведении
+// equipmentDropdown.addEventListener('mouseenter', () => {
+//    clearTimeout(hideTimer);
+// });
+
+// // Обработчики для содержимого dropdown
+// const equipmentButtons = document.querySelectorAll('.left-side__button');
+// equipmentButtons.forEach(button => {
+//    button.addEventListener('click', (e) => {
+//       // Снимаем активный класс со всех кнопок
+//       equipmentButtons.forEach(btn => {
+//          btn.classList.remove('active');
+//       });
+
+//       // Добавляем активный класс текущей кнопке
+//       button.classList.add('active');
+
+//       // Переключаем табы
+//       const target = button.dataset.target;
+//       const tabs = document.querySelectorAll('.right-side__box');
+//       tabs.forEach(tab => {
+//          tab.classList.remove('active');
+//       });
+
+//       // Активируем нужный таб
+//       if (target) {
+//          const activeTab = document.querySelector(`.${target}`);
+//          if (activeTab) {
+//             activeTab.classList.add('active');
+//          }
+//       }
+//    });
+// });
+//!!!! Сделать overlay, посмотреть что там написал гигачат
 
 const equipmentItem = document.querySelector('.menu__item-equipment');
 const equipmentDropdown = document.querySelector('.dropdown-equipment');
 let hideTimer = null;
 
-// Функция для скрытия dropdown с задержкой
-const hideDropdown = () => {
-   hideTimer = setTimeout(() => {
-      equipmentDropdown.style.display = 'none';
-   }, 200);
+// Открытие выпадающего списка
+const openDropdown = () => {
+   equipmentDropdown.classList.add('is-open');
 };
 
-// Показываем dropdown без задержки
+// Закрытие выпадающего списка
+const closeDropdown = () => {
+   equipmentDropdown.classList.remove('is-open');
+};
+
+// Таймер для отложенного закрытия
+const hideDropdown = () => {
+   hideTimer = setTimeout(closeDropdown, 200);
+};
+
+// События открытия и закрытия
 equipmentItem.addEventListener('mouseenter', () => {
    clearTimeout(hideTimer);
-   equipmentDropdown.style.display = 'flex';
+   openDropdown();
 });
 
-// При уходе с пункта меню
 equipmentItem.addEventListener('mouseleave', (e) => {
    const related = e.relatedTarget;
    const isMovingToDropdown = related?.closest('.dropdown-equipment');
@@ -79,7 +197,7 @@ equipmentItem.addEventListener('mouseleave', (e) => {
    }
 });
 
-// При уходе с dropdown
+// Логика удержания открытого состояния
 equipmentDropdown.addEventListener('mouseleave', (e) => {
    const related = e.relatedTarget;
    const isMovingToItem = related?.closest('.menu__item-equipment');
@@ -89,62 +207,53 @@ equipmentDropdown.addEventListener('mouseleave', (e) => {
    }
 });
 
-// Отменяем скрытие при новом наведении
+// Повторное открытие при наведении
 equipmentDropdown.addEventListener('mouseenter', () => {
    clearTimeout(hideTimer);
 });
 
-// Обработчики для содержимого dropdown
-const equipmentButtons = document.querySelectorAll('.left-side__button');
-equipmentButtons.forEach(button => {
+// Логика вкладок
+// const buttons = document.querySelectorAll('.left-side__button');
+// buttons.forEach(button => {
+//    button.addEventListener('click', (e) => {
+//       const target = button.dataset.target;
+//       const activeTab = document.querySelector(`.${target}`);
+
+//       // Деактивируем все вкладки
+//       const tabs = document.querySelectorAll('.right-side__box');
+//       tabs.forEach(tab => tab.classList.remove('active'));
+
+//       // Активируем нужную вкладку
+//       if (activeTab) {
+//          activeTab.classList.add('active');
+//       }
+//    });
+// });
+
+const buttons = document.querySelectorAll('.left-side__button');
+
+buttons.forEach(button => {
    button.addEventListener('click', (e) => {
-      // Снимаем активный класс со всех кнопок
-      equipmentButtons.forEach(btn => {
-         btn.classList.remove('active');
-      });
+      // Убираем активный класс у всех кнопок
+      buttons.forEach(btn => btn.classList.remove('active'));
 
       // Добавляем активный класс текущей кнопке
       button.classList.add('active');
 
-      // Переключаем табы
+      // Переключаем вкладки
       const target = button.dataset.target;
-      const tabs = document.querySelectorAll('.right-side__box');
-      tabs.forEach(tab => {
-         tab.classList.remove('active');
-      });
+      const activeTab = document.querySelector(`.${target}`);
 
-      // Активируем нужный таб
-      if (target) {
-         const activeTab = document.querySelector(`.${target}`);
-         if (activeTab) {
-            activeTab.classList.add('active');
-         }
+      // Убираем активность у всех вкладок
+      const tabs = document.querySelectorAll('.right-side__box');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Активируем нужную вкладку
+      if (activeTab) {
+         activeTab.classList.add('active');
       }
    });
 });
-
-//? dropdown-equipment
-// const equipmentButtons = document.querySelectorAll('.left-side__button');
-
-// equipmentButtons.forEach(button => {
-//    button.addEventListener('click', e => {
-//       // Снимаю активный класс с со всех equipmentButtons
-//       equipmentButtons.forEach(btn => {
-//          btn.classList.remove('active');
-//       });
-
-//       button.classList.add('active');
-
-//       const target = button.dataset.target;
-//       const tabs = document.querySelectorAll('.right-side__box');
-
-//       tabs.forEach(tab => {
-//          tab.classList.remove('active');
-//       });
-
-//       document.querySelector(`.${target}`).classList.add('active');
-//    });
-// });
 
 //? repeat section
 
