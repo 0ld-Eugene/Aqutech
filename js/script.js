@@ -328,12 +328,3 @@ const swiper = new Swiper('.swiper', {
 
    }
 })
-
-
-//? Вычисления что бы понять значение font-size
-// const parentElement = document.querySelector('.active');
-// const fontSize = window.getComputedStyle(parentElement).getPropertyValue('font-size')
-// console.log(fontSize)
-
-
-
