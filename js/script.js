@@ -328,3 +328,7 @@ const swiper = new Swiper('.swiper', {
 
    }
 })
+
+fetch('pages/footer.html')
+   .then(res => res.text())
+   .then(html => document.getElementById('footer').innerHTML = html);
