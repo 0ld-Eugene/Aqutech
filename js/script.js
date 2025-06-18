@@ -1,71 +1,11 @@
 
-// document.addEventListener('DOMContentLoaded', function () {
-//    const searchButton = document.getElementById("searchButton");
-//    const searchInput = document.getElementById("searchInput");
-
-//    searchButton.addEventListener('click', () => {
-//       if (!searchInput.classList.contains("show-search-input")) {
-//          searchInput.classList.add("show-search-input");
-//          searchButton.classList.add("hide-search-button")
-//       } else {
-//          searchInput.classList.remove("show-search-input");
-//          searchButton.classList.remove("hide-search-button")
-//       }
-//       searchInput.focus()
-//    })
-// })
-
-// document.addEventListener('DOMContentLoaded', function () {
-//    const searchButton = document.getElementById("searchButton");
-//    const searchInput = document.getElementById("searchInput");
-
-//    // Нажатие на кнопку поиска
-//    searchButton.addEventListener("click", () => {
-//       toggleSearch();
-//    });
-
-//    // Потеря фокуса на input
-//    searchInput.addEventListener("blur", () => {
-//       setTimeout(() => {
-//          if (!searchInput.value.trim()) {
-//             toggleSearch();
-//          }
-//       }, 100);
-//    });
-
-//    // Функция переключения состояния
-//    function toggleSearch() {
-//       if (searchInput.classList.contains("active")) {
-//          searchInput.classList.remove("active");
-//          searchButton.classList.remove("hidden");
-//       } else {
-//          searchInput.classList.add("active");
-//          searchButton.classList.add("hidden");
-//          searchInput.focus(); // Фокусируем поле
-//       }
-//    }
-// });
-
-// // Кнопка бургера
-// document.querySelector('.burger').addEventListener('click', function () {
-//    this.classList.toggle('active');
-//    const menuBody = document.querySelector('.menu__body');
-//    menuBody.classList.toggle('active');
-// });
-// // Закрытие меню по иконке
-// document.querySelector('.close-svg').addEventListener('click', () => {
-//    const menuBody = document.querySelector('.menu__body');
-//    if (menuBody.classList.contains('active')) {
-//       menuBody.classList.remove('active');
-//    }
-// });
-
 const burgerButton = document.querySelector('.burger');
 const closeIcon = document.querySelector('.close-svg');
 const menuBody = document.querySelector('.menu__body');
 
 // Обработчик события для открытия меню
-burgerButton.addEventListener('click', function () {
+burgerButton.addEventListener('click', function (e) {
+   e.stopPropagation();
    this.classList.toggle('active');       // переключаем активный класс у кнопки бургера
    menuBody.classList.toggle('active');   // переключаем активный класс у тела меню
 });
@@ -88,80 +28,6 @@ document.addEventListener('click', function (event) {
       removeActiveClasses();              // если клик вне меню и бургера, удаляем классы active
    }
 });
-
-// //? dropdown-equipment
-
-// const equipmentItem = document.querySelector('.menu__item-equipment');
-// const equipmentDropdown = document.querySelector('.dropdown-equipment');
-// let hideTimer = null;
-
-// // Функция для скрытия dropdown с задержкой
-// const hideDropdown = () => {
-//    hideTimer = setTimeout(() => {
-//       equipmentDropdown.style.display = 'none';
-//    }, 200);
-// };
-
-// // Показываем dropdown без задержки
-// equipmentItem.addEventListener('mouseenter', () => {
-//    clearTimeout(hideTimer);
-//    equipmentDropdown.style.display = 'flex';
-// });
-
-// // При уходе с пункта меню
-// equipmentItem.addEventListener('mouseleave', (e) => {
-//    const related = e.relatedTarget;
-//    const isMovingToDropdown = related?.closest('.dropdown-equipment');
-
-//    if (!isMovingToDropdown) {
-//       hideDropdown();
-//    }
-// });
-
-// // При уходе с dropdown
-// equipmentDropdown.addEventListener('mouseleave', (e) => {
-//    const related = e.relatedTarget;
-//    const isMovingToItem = related?.closest('.menu__item-equipment');
-
-//    if (!isMovingToItem) {
-//       hideDropdown();
-//    }
-// });
-
-// // Отменяем скрытие при новом наведении
-// equipmentDropdown.addEventListener('mouseenter', () => {
-//    clearTimeout(hideTimer);
-// });
-
-// // Обработчики для содержимого dropdown
-// const equipmentButtons = document.querySelectorAll('.left-side__button');
-// equipmentButtons.forEach(button => {
-//    button.addEventListener('click', (e) => {
-//       // Снимаем активный класс со всех кнопок
-//       equipmentButtons.forEach(btn => {
-//          btn.classList.remove('active');
-//       });
-
-//       // Добавляем активный класс текущей кнопке
-//       button.classList.add('active');
-
-//       // Переключаем табы
-//       const target = button.dataset.target;
-//       const tabs = document.querySelectorAll('.right-side__box');
-//       tabs.forEach(tab => {
-//          tab.classList.remove('active');
-//       });
-
-//       // Активируем нужный таб
-//       if (target) {
-//          const activeTab = document.querySelector(`.${target}`);
-//          if (activeTab) {
-//             activeTab.classList.add('active');
-//          }
-//       }
-//    });
-// });
-//!!!! Сделать overlay, посмотреть что там написал гигачат
 
 const equipmentItem = document.querySelector('.menu__item-equipment');
 const equipmentDropdown = document.querySelector('.dropdown-equipment');
@@ -211,24 +77,6 @@ equipmentDropdown.addEventListener('mouseleave', (e) => {
 equipmentDropdown.addEventListener('mouseenter', () => {
    clearTimeout(hideTimer);
 });
-
-// Логика вкладок
-// const buttons = document.querySelectorAll('.left-side__button');
-// buttons.forEach(button => {
-//    button.addEventListener('click', (e) => {
-//       const target = button.dataset.target;
-//       const activeTab = document.querySelector(`.${target}`);
-
-//       // Деактивируем все вкладки
-//       const tabs = document.querySelectorAll('.right-side__box');
-//       tabs.forEach(tab => tab.classList.remove('active'));
-
-//       // Активируем нужную вкладку
-//       if (activeTab) {
-//          activeTab.classList.add('active');
-//       }
-//    });
-// });
 
 const buttons = document.querySelectorAll('.left-side__button');
 
