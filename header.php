@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="light">
+   <link rel="stylesheet" href="styles/main.css?v=<?php echo time();?>">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+   <title>AndruTech</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
       <div class="header-wrapper">
          <div class="header">
             <div class="header__container">

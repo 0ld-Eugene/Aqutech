@@ -1171,6 +1171,10 @@ svg * {
     font-size: 14px;
   }
 }
+.about-hero__container {
+  background-color: #df5252;
+}
+
 .hero {
   padding-top: 75px;
   padding-bottom: 100px;
@@ -2836,6 +2840,11 @@ svg * {
 #overlay.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .repeat-section {

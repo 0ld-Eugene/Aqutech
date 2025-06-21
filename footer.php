@@ -1,3 +1,4 @@
+      <div id="overlay"></div>
       <footer class="footer">
          <div class="footer__container">
             <div class="footer__logo">
@@ -21,3 +22,9 @@
             </div>
          </div>
       </footer>
+         </div>
+   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

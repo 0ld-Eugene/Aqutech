@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="color-scheme" content="light">
-   <link rel="stylesheet" href="styles/main.css">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
-   <title>AndruTech</title>
-</head>
-
-<body>
-
-   <div class="wrapper">
 
    <?php include __DIR__ . '/header.php'; ?>
-
-      <main class="main">
-
+   <main class="main">
          <section class="hero">
             <div class="hero__container">
                <div class="hero__main">
@@ -392,7 +376,7 @@
          </div>
          <section class="repeat-section bg-color"></section>
       </main>
-      <div id="overlay"></div>
+      
       <div class="svg">
          <svg>
             <symbol id="icon-arrow">
@@ -405,9 +389,3 @@
 
       <?php include 'footer.php'; ?>
 
-   </div>
-   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
-   <script src="js/script.js"></script>
-</body>
-
-</html>
