@@ -1,3 +1,141 @@
-.about-hero__container {
-   background-color: #df5252;
+.about-hero {
+   padding-top: 60px;
+   padding-bottom: 100px;
+   // .about-hero__container
+
+   &__container {
+   }
+
+   // .about-hero__title
+
+   &__title {
+      font-size: 66px;
+      max-width: 1232px;
+      margin-bottom: 24px;
+   }
+
+   // .about-hero__subtitle
+
+   &__subtitle {
+      padding-bottom: 50px;
+      p {
+         font-family: Mulish;
+         font-size: 32px;
+         line-height: 120%; /* 38.4px */
+         max-width: 969px;
+      }
+      p + p {
+         max-width: 1160px;
+         margin-top: 16px;
+      }
+      p > span {
+         font-weight: 700;
+      }
+   }
+
+   // .about-hero__box
+
+   &__box {
+   }
+
+   // .about-hero__cards
+
+   &__cards {
+      display: flex;
+      gap: 40px;
+   }
+
+   // .about-hero__card
+
+   &__card {
+      display: flex;
+      flex-direction: column-reverse;
+      flex: 1 1 33.333%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 653px;
+      transition: flex-basis 0.5s ease-in-out;
+      position: relative;
+      p {
+         color: var(--bg-color);
+         font-variant-numeric: lining-nums proportional-nums;
+         font-family: Raleway;
+         font-size: 40px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 100%; /* 40px */
+         text-transform: uppercase;
+         transition: flex-direction 0.3s ease-in-out;
+         margin-bottom: 0;
+      }
+      &:hover {
+         flex-basis: 50%;
+      }
+   }
+   &__card--1 {
+      background-image: url(../images/about-solutions.png);
+      p {
+      }
+   }
+   &__card--2 {
+      background-image: url(../images/about-approach.png);
+      p {
+         max-width: 461px;
+      }
+   }
+   &__card--3 {
+      background-image: url(../images/about-beauty.png);
+      p {
+         // max-width: 500px;
+         max-height: 500px;
+      }
+   }
+   // .about-hero__vertical-text
+
+   &__vertical-text {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      transform: rotate(180deg);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transition: opacity 0.3s ease;
+   }
+   &__horizontal-text {
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      transform: translateY(200%);
+      transition:
+         transform 0.4s ease-in-out,
+         opacity 0.4s ease-in-out;
+      max-width: 605px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      span {
+         display: inline-block;
+         color: var(--bg-color-secondary);
+         font-family: Mulish;
+         font-size: 22px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 120%; /* 28.8px */
+         text-transform: none;
+         max-width: 590px;
+      }
+   }
+}
+.about-hero__card:hover .about-hero__vertical-text {
+   // transform: rotate(180deg) translateX(1000px);
+   opacity: 0;
+}
+.about-hero__card:hover .about-hero__horizontal-text {
+   transform: translateY(0%);
+   opacity: 1;
 }

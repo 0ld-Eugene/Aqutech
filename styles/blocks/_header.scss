@@ -267,6 +267,7 @@
       &:hover .dropdown-services {
          opacity: 1;
          visibility: visible;
+         pointer-events: auto;
       }
    }
    &__item > a::after {
