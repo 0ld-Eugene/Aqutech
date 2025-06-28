@@ -16,7 +16,6 @@
    font-style: normal;
    font-weight: 700;
    line-height: 80%; /* 84px */
-   text-transform: uppercase;
    text-transform: capitalize;
    font-variant-numeric: lining-nums proportional-nums;
 }
@@ -43,12 +42,18 @@
    }
 }
 
+//*-----.title-middle-------
+
+.title-middle {
+   color: var(--btn-color);
+   font-weight: 700;
+   font-size: inherit;
+   line-height: 120%; /* 64.8px */
+}
 //*-----.title-small-------
 
 .title-small {
    color: var(--accent-color);
-   font-family: Mulish;
-   font-style: normal;
    font-weight: 700;
    font-size: inherit;
    line-height: 80%; /* 32px */

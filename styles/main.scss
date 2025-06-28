@@ -1,7 +1,8 @@
 @import "normalize", "fonts", "mixins", "variables", "globals";
 
 @import "blocks/header", "blocks/hero", "blocks/advantages", "blocks/callback", "blocks/categories", "blocks/about",
-   "blocks/services", "blocks/about-hero", "blocks/structure", "blocks/footer";
+   "blocks/services", "blocks/about-hero", "blocks/structure", "blocks/about-image-block", "blocks/resources",
+   "blocks/footer";
 
 //Скрыть только для webkit
 ::-webkit-scrollbar {
