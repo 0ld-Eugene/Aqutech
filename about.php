@@ -1,14 +1,14 @@
 <?php include __DIR__ . '/header.php'; ?>
 
 <main class="main">
-   <section class="about-hero">
+   <section class="about-hero hero-block">
       <div class="about-hero__container">
-         <div class="about-hero__title">
-            <h1 class="">
+         <div class="about-hero__title hero-block-title">
+            <h1>
                ЮВМ — команда инженеров‑экспертов в сфере подготовки и очистки воды
             </h1>
          </div>
-         <div class="about-hero__subtitle">
+         <div class="about-hero__subtitle hero-block-subtitle">
             <p class="text">
                Стратегический партнёр по созданию, внедрению и долгосрочной поддержке оборудования любой сложности.
             </p>
@@ -167,7 +167,7 @@
          </ul>
       </div>
    </section>
-
+   <?php include __DIR__ . '/callback-form.php'; ?>
 </main>
 
 
