@@ -56,7 +56,7 @@
                                  </li>
                                  <li class="dropdown-direction__item item" role="menuitem">
                                     <a href="#">
-                                       Штат
+                                       О нас
                                     </a>
                                  </li>
                                  <li class="dropdown-direction__item item" role="menuitem">
@@ -77,9 +77,6 @@
                            <a href="#">
                               Оборудование
                            </a>
-                           <!--       -->
-                           <!--? !1!!!-->
-                           <!--! !1!!!-->
                            <div class="menu__dropdown dropdown-hidden">
                               <ul class="dropdown-hidden__menu">
                                  <li class="dropdown-hidden__item">

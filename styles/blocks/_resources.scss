@@ -1,3 +1,5 @@
+/*-----------------.resources------------------*/
+
 .resources {
    padding-top: 100px;
    padding-bottom: 100px;
@@ -13,30 +15,36 @@
    // .resources__title
 
    &__title {
-      h2 {
-         font-size: 70px;
-      }
    }
 
    // .resources__cards
 
    &__cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
    }
 
    // .resources__card
 
    &__card {
-      display: flex;
-      flex-direction: column;
       gap: 30px;
       background-color: var(--bg-color-secondary);
-      border-radius: 20px;
-      padding: 30px;
       p {
          max-width: 460px;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__card {
+         svg {
+            width: 50px;
+            height: 50px;
+         }
+      }
+   }
+   @media (max-width: 834px) {
+      &__card {
+         svg {
+            width: 40px;
+            height: 40px;
+         }
       }
    }
 }

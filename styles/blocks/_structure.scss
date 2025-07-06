@@ -1,3 +1,4 @@
+/*-----------------structure------------------*/
 .structure {
    padding-top: 100px;
    padding-bottom: 100px;
@@ -11,33 +12,45 @@
       gap: 50px;
    }
 
+   @media (max-width: 1440px) {
+      &__container {
+         gap: 40px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__container {
+         gap: 24px;
+      }
+   }
+
    // .structure__title
 
    &__title {
+      // font-size: 54px;
       h2 {
-         color: var(--btn-color);
-         font-size: 70px;
+      }
+   }
+   @media (max-width: 1100px) {
+      &__title {
+         // font-size: 40px;
+      }
+   }
+   @media (max-width: 640px) {
+      &__title {
+         // font-size: 22px;
       }
    }
 
    // .structure__cards
 
    &__cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-   } 
+   }
 
    // .structure__card
 
    &__card {
-      display: flex;
-      flex-direction: column;
       gap: 20px;
-      max-width: 520px;
-      padding: 30px;
-      border-radius: 20px;
-      background: var(--bg-color);
+      background-color: var(--bg-color);
       div {
          color: var(--accent-color);
          font-variant-numeric: lining-nums proportional-nums;
@@ -48,9 +61,40 @@
          line-height: 100%; /* 40px */
          text-transform: uppercase;
       }
-      p {
-         font-size: 24px;
-         line-height: 120%;
+   }
+
+   @media (max-width: 1440px) {
+      &__card {
+         div {
+            font-size: 32px;
+         }
       }
+   }
+   @media (max-width: 1100px) {
+      &__card {
+         div {
+            font-size: 24px;
+         }
+      }
+   }
+   @media (max-width: 768px) {
+      &__card {
+         gap: 12px;
+         div {
+            font-size: 20px;
+         }
+      }
+   }
+}
+@media (max-width: 1100px) {
+   .structure {
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+}
+@media (max-width: 834px) {
+   .structure {
+      padding-top: 60px;
+      padding-bottom: 60px;
    }
 }
