@@ -2,7 +2,7 @@
 
 @import "blocks/header", "blocks/hero", "blocks/advantages", "blocks/callback", "blocks/categories", "blocks/about",
    "blocks/services", "blocks/about-hero", "blocks/structure", "blocks/about-image-block", "blocks/resources",
-   "blocks/footer";
+   "blocks/partners-hero", "blocks/industries", "blocks/footer";
 
 //Скрыть только для webkit
 ::-webkit-scrollbar {
@@ -112,4 +112,69 @@
 }
 .svg {
    display: none;
+}
+.partners-image-block {
+   background-image: url(../images/partners-image-block.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 600px;
+}
+@media (max-width: 1440px) {
+   .partners-image-block {
+      height: 500px;
+   }
+}
+@media (max-width: 1100px) {
+   .partners-image-block {
+      height: 400px;
+   }
+}
+@media (max-width: 768px) {
+   .partners-image-block {
+      height: 216px;
+   }
+}
+.partners-image-block__container {
+   height: 100%;
+   display: flex;
+   flex-direction: column-reverse;
+   padding-bottom: 100px;
+   padding-top: 100px;
+   p {
+      color: var(--bg-color-secondary);
+      font-size: 54px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 54px */
+      max-width: 1150px;
+   }
+
+   @media (max-width: 1100px) {
+      p {
+         max-width: 570px;
+         font-size: 40px;
+      }
+   }
+   @media (max-width: 768px) {
+      p {
+         max-width: 320px;
+         font-size: 20px;
+      }
+   }
+   .short-block {
+      max-width: 1040px;
+   }
+}
+@media (max-width: 1100px) {
+   .partners-image-block__container {
+      padding-bottom: 80px;
+      padding-top: 80px;
+   }
+}
+@media (max-width: 768px) {
+   .partners-image-block__container {
+      padding-bottom: 40px;
+      padding-top: 40px;
+   }
 }

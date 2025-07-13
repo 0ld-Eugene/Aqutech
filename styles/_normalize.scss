@@ -71,8 +71,6 @@ li {
  чтобы избежать взаимодействие с более сложным селектором
 */
 p {
-   --paragraphMarginBottom: 24px;
-
    margin-block: 0;
 }
 
@@ -91,7 +89,6 @@ img,
 video {
    display: block;
    max-width: 100%;
-   height: auto;
 }
 
 /**

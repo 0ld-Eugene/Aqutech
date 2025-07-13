@@ -122,30 +122,6 @@ if (buttons.length > 0) {
    });
 }
 
-// // ========== Клонирование блока с обратной связью ==========
-// const callbackContainer = document.querySelector('.callback__container'); // Блок, который клонируем
-// const repeatTarget = document.querySelector('.repeat-section'); // Куда вставляем клон
-
-// // Проверяем, есть ли и оригинал, и место вставки
-// if (callbackContainer && repeatTarget) {
-//    // Клонируем весь блок (включая содержимое)
-//    const cloneSection = callbackContainer.cloneNode(true);
-
-//    // Создаем уникальный ID (для checkbox и label)
-//    const uniqueId = 'privacyPolicy_' + Date.now();
-
-//    // Находим клонированные элементы
-//    const clonedCheckbox = cloneSection.querySelector('input[name="privacyPolicy"]');
-//    const clonedLabel = cloneSection.querySelector('label[for="privacyPolicy"]');
-
-//    // Назначаем новые id и for
-//    if (clonedCheckbox) clonedCheckbox.id = uniqueId;
-//    if (clonedLabel) clonedLabel.setAttribute('for', uniqueId);
-
-//    // Вставляем клон в нужное место
-//    repeatTarget.appendChild(cloneSection);
-// }
-
 // ========== Инициализация слайдера Swiper ==========
 if (document.querySelector('.swiper')) {
    const swiper = new Swiper('.swiper', {
@@ -168,3 +144,4 @@ if (document.querySelector('.swiper')) {
       }
    });
 }
+
