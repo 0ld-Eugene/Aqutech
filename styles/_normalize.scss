@@ -123,22 +123,14 @@ html,
 }
 
 body {
-   /**
-   Пригодится в большинстве ситуаций
-   (когда, например, нужно будет "прижать" футер к низу сайта)
-  */
    min-height: 100%;
-   /**
-   Унифицированный интерлиньяж
-  */
-   line-height: 1.5;
-   font-size: 16px;
-   color: #2f2f2f;
    font-family: Mulish;
    font-style: normal;
+   font-size: 16px;
    font-weight: 500;
    line-height: 120%; /* 21.6px */
-   background-color: #f3baba;
+   color: #2f2f2f;
+   // background-color: #f3baba;
 }
 
 /**

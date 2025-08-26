@@ -21,21 +21,25 @@
          <form class="callback__form" id="contact-form" action="#" method="post">
             <div class="callback__name">
                <input type="text" name="name" id="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
+               <span class="input-error-message" aria-live="polite"></span>
             </div>
             <div class="callback__group">
-               <input type="tel" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон"
-                  pattern="^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$" required>
+               <input type="text" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон"
+                  pattern="^\+?[0-9]{7,15}$" required>
+               <span class="input-error-message" aria-live="polite"></span>
                <input type="email" name="email" id="email" placeholder="E-mail" aria-label="email" required>
+               <span class="input-error-message" aria-live="polite"></span>
             </div>
             <div class="callback__policy">
                <label for="<?php echo $uniqueId; ?>">
                   <input type="checkbox" id="<?php echo $uniqueId;?>" name="privacyPolicy" required>
                   <span class="text">Я согласен (-на) с политикой конфиденциальности и обработки
                      персональных данных.</span>
+                  <span class="input-error-message" aria-live="polite"></span>
                </label>
             </div>
             <div class="callback__button">
-               <button class="button" type="submit" disabled>
+               <button class="button" type="submit">
                   <span>Отправить</span>
                </button>
             </div>

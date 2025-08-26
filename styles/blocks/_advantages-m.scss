@@ -1,0 +1,219 @@
+.advantages-m {
+   padding-bottom: 80px;
+
+   // .advantages-m__container
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+   }
+   @media (min-width: 769px) {
+      &__container {
+         gap: 30px;
+      }
+   }
+   @media (min-width: 1025px) {
+      &__container {
+         gap: 40px;
+      }
+   }
+   @media (min-width: 1441px) {
+      &__container {
+         gap: 50px;
+      }
+   }
+   // .advantages-m__title
+   &__title {
+      max-width: 80%;
+      position: relative;
+   }
+   @media (min-width: 1441px) {
+      &__title {
+         max-width: 100%;
+      }
+   }
+
+   // .advantages-m__items
+
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+   }
+   @media (min-width: 769px) {
+      &__items {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+      }
+   }
+   @media (min-width: 1025px) {
+      &__items {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+      }
+   }
+   @media (min-width: 1441px) {
+      &__items {
+         gap: 40px;
+      }
+   }
+
+   // .advantages-m__item
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: var(--bg-color-secondary);
+      svg {
+         width: 40px;
+         height: 40px;
+      }
+      p {
+         font-size: 12px;
+         line-height: 120%;
+         // max-width: 276px;
+      }
+   }
+
+   @media (min-width: 769px) {
+      &__item {
+         gap: 12px;
+         svg {
+            width: 40px;
+            height: 40px;
+         }
+      }
+   }
+   @media (min-width: 1025px) {
+      &__item {
+         gap: 20px;
+         padding: 30px;
+         svg {
+            width: 50px;
+            height: 50px;
+         }
+         p {
+            font-size: 14px;
+         }
+      }
+   }
+   @media (min-width: 1441px) {
+      &__item {
+         gap: 30px;
+         padding: 30px;
+         svg {
+            width: 56px;
+            height: 56px;
+         }
+         p {
+            font-size: 24px;
+         }
+      }
+   }
+}
+
+@media (min-width: 1025px) {
+   .advantages-m {
+      padding-bottom: 100px;
+   }
+}
+
+/*-----------------.capacity------------------*/
+
+.capacity {
+   width: 100%;
+   min-width: 390px;
+   min-height: 434px;
+   background-image: url(../images/capacity-block.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: end;
+
+   // .capacity__conatainer
+
+   &__container {
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 30px;
+      p {
+         color: var(--bg-color-secondary);
+         font-size: 24px;
+         font-weight: 700;
+         line-height: 100%;
+         font-weight: 900;
+      }
+      p + p {
+         font-size: 14px;
+         font-weight: 700;
+         line-height: 100%; /* 14px */
+      }
+      span {
+         color: var(--bg-color-secondary);
+         text-decoration: underline;
+         text-decoration-thickness: 4%;
+      }
+   }
+   @media (min-width: 769px) {
+      &__text {
+         gap: 30px;
+         padding-left: 0px;
+         padding-right: 0px;
+         padding-bottom: 80px;
+         p {
+            font-size: 32px;
+         }
+         p + p {
+            font-size: 16px;
+         }
+      }
+   }
+   @media (min-width: 1025px) {
+      &__text {
+         gap: 30px;
+         padding-bottom: 100px;
+         p {
+            font-size: 40px;
+         }
+         p + p {
+            font-size: 24px;
+         }
+      }
+   }
+   @media (min-width: 1441px) {
+      &__text {
+         gap: 50px;
+         p {
+            font-size: 54px;
+         }
+         p + p {
+            font-size: 32px;
+         }
+      }
+   }
+}
+@media (min-width: 769px) {
+   .capacity {
+      min-height: 580px;
+   }
+}
+@media (min-width: 1025px) {
+   .capacity {
+      height: 600px;
+   }
+}
+@media (min-width: 1441px) {
+   .capacity {
+      height: 900px;
+   }
+}
