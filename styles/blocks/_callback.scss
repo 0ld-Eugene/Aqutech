@@ -114,7 +114,7 @@
       flex-direction: column;
       gap: 12px;
    }
-   &__form > div > input {
+   &__form div > input {
       width: 100%;
       padding: 24px;
       border-radius: 72px;
@@ -137,17 +137,17 @@
       }
    }
    @media (max-width: 1440px) {
-      &__form > div > input {
+      &__form div > input {
          font-size: 16px;
       }
    }
    @media (max-width: 834px) {
-      &__form > div > input {
+      &__form div > input {
          font-size: 14px;
       }
    }
    @media (max-width: 390px) {
-      &__form > div > input {
+      &__form div > input {
          font-size: 12px;
       }
    }
@@ -158,6 +158,7 @@
    }
    &__name input {
       display: flex;
+      flex-direction: column;
       width: 100%;
    }
 
@@ -168,17 +169,22 @@
       gap: 12px;
       margin-bottom: 12px;
    }
-   &__group > input {
-      flex-grow: 1;
-      flex-basis: 0;
+
+   &__input-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
    }
+
+   //  .callback__input-wrapper
+   &__input-wrapper > input {
+      flex-grow: 1;
+   }
+
    @media (max-width: 600px) {
       &__group {
          flex-wrap: wrap;
          margin-bottom: 12px;
-      }
-      &__group > input {
-         flex-basis: auto;
       }
    }
 
@@ -192,6 +198,7 @@
          font-family: Mulish;
          font-size: inherit;
          line-height: 120%; /* 28px */
+         width: 100%;
       }
    }
    @media (max-width: 390px) {
@@ -200,12 +207,19 @@
       }
    }
    &__policy label {
-      display: inline-flex;
+      // display: inline-flex;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
       align-items: center;
       cursor: pointer;
       position: relative;
       span {
          padding-left: 42px;
+      }
+      span + span {
+         position: absolute;
+         top: 100%;
+         left: 0;
       }
    }
    &__policy label::before {
@@ -276,6 +290,7 @@
    // .callback__button
 
    &__button {
+      margin-top: 20px;
       width: 100%;
       button {
          width: 100%;
@@ -315,4 +330,38 @@
       padding-bottom: 60px;
       padding-top: 60px;
    }
+}
+
+/*-----------------.input-error-message------------------*/
+
+:root {
+   //... другие цвета
+   --error-color: #c70700;
+}
+.callback__form input.error-input {
+   border-color: var(--error-color);
+}
+.input-error-message {
+   display: none;
+   position: relative;
+   color: var(--error-color);
+   font-size: 12px;
+   margin-top: 5px;
+   padding-left: 20px;
+}
+.input-error-message::after {
+   position: absolute;
+   content: "";
+   width: 15px;
+   height: 15px;
+   top: 50%;
+   left: 0;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-image: url("../icons/warning.svg");
+   color: var(--error-color);
+   transform: translateY(-50%);
+}
+.input-error-message.show {
+   display: block;
 }

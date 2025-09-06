@@ -18,17 +18,21 @@
          </div>
       </div>
       <div class="callback__right-side">
-         <form class="callback__form" id="contact-form" action="#" method="post">
+         <form class="callback__form" id="contact-form" action="#" method="post" novalidate>
             <div class="callback__name">
                <input type="text" name="name" id="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
                <span class="input-error-message" aria-live="polite"></span>
             </div>
             <div class="callback__group">
-               <input type="text" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон"
-                  pattern="^\+?[0-9]{7,15}$" required>
-               <span class="input-error-message" aria-live="polite"></span>
-               <input type="email" name="email" id="email" placeholder="E-mail" aria-label="email" required>
-               <span class="input-error-message" aria-live="polite"></span>
+               <div class="callback__input-wrapper">
+                  <input type="text" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон"
+                     pattern="^\+?[0-9]{7,15}$" required>
+                  <span class="input-error-message" aria-live="polite"></span>
+               </div>
+               <div class="callback__input-wrapper">
+                  <input type="email" name="email" id="email" placeholder="E-mail" aria-label="email" required>
+                  <span class="input-error-message" aria-live="polite"></span>
+               </div>
             </div>
             <div class="callback__policy">
                <label for="<?php echo $uniqueId; ?>">

@@ -121,9 +121,84 @@ if (buttons.length > 0) {
       });
    });
 }
-// ========== error-form ==========
+// ==================== error-form ===================
 
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('contact-form');
+   const nameInput = document.querySelector('[name="name"]');
+   const phoneInput = document.querySelector('[name="phone"]');
+   const emailInput = document.querySelector('[name="email"]');
+   const policyInput = document.querySelector('[name="privacyPolicy"]');
 
+   // Функция, которая показывает сообщение об ошибке
+   function showInputError(input, message) {
+      const errorSpan = input.parentNode.querySelector('.input-error-message');
+      if (errorSpan) {
+         errorSpan.textContent = message;
+         errorSpan.classList.add('show');
+         input.classList.add('error-input')
+      }
+   }
+   // Функция, которая скрывает сообщение об ошибке
+   function hideInputError(input) {
+      const errorSpan = input.parentNode.querySelector('.input-error-message');
+      if (errorSpan) {
+         errorSpan.textContent = '';
+         errorSpan.classList.remove('show');
+         input.classList.remove('error-input');
+      }
+   }
+
+   form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      let isFormValid = true;
+
+      // Проверка поля имени
+      if (nameInput.validity.valueMissing) {
+         isFormValid = false;
+         showInputError(nameInput, 'Пожалуйста, введите ваше имя');
+      } else {
+         hideInputError(nameInput)
+      }
+
+      // Проверка поля телефона
+      if (phoneInput.validity.valueMissing) {
+         isFormValid = false;
+         showInputError(phoneInput, 'Это поле обязательно для заполнения');
+      } else if (phoneInput.validity.patternMismatch) {
+         isFormValid = false;
+         showInputError(phoneInput, 'Пожалуйста введите корректный номер телефона')
+      } else {
+         hideInputError(phoneInput);
+      }
+
+      // Проверка поля Email
+      if (emailInput.validity.valueMissing) {
+         isFormValid = false;
+         showInputError(emailInput, 'Это поле обязательно для заполнения');
+      } else if (emailInput.validity.typeMismatch) {
+         isFormValid = false;
+         showInputError(emailInput, 'Пожалуйста, введите корректный E-mail');
+      } else {
+         hideInputError(emailInput)
+      }
+
+      // Проверка чекбокса
+      if (!policyInput.checked) {
+         isFormValid = false;
+         showInputError(policyInput, 'Для отправки формы необходимо согласие')
+      } else {
+         hideInputError(policyInput)
+      }
+
+      if (isFormValid) {
+         console.log("Форма успешно заполнена. Можно отправлять данные")
+      } else {
+         console.log("Форма заполнена неправильно");
+
+      }
+   })
+})
 
 // ========== Инициализация слайдера Swiper ==========
 if (document.querySelector('.swiper')) {

@@ -376,6 +376,7 @@ svg * {
   --bg-color-secondary: #f2f7fd;
   --bd-color-item: #e1e1e1;
   --bg-color: #fafcff;
+  --error-color: #c70700;
 }
 
 /*----------------.title-min-------------------*/
@@ -1980,7 +1981,7 @@ svg * {
   flex-direction: column;
   gap: 12px;
 }
-.callback__form > div > input {
+.callback__form div > input {
   width: 100%;
   padding: 24px;
   border-radius: 72px;
@@ -1990,34 +1991,35 @@ svg * {
   box-sizing: border-box;
   font-size: 16.8px;
 }
-.callback__form > div > input:focus {
+.callback__form div > input:focus {
   outline: none;
   border: 1.2px solid var(--btn-hover-color);
   background-color: var(--bg-color);
 }
-.callback__form > div > input::placeholder {
+.callback__form div > input::placeholder {
   color: rgba(47, 47, 47, 0.8);
   font-weight: 500;
   line-height: 120%; /* 20.16px */
   font-size: inherit;
 }
 @media (max-width: 1440px) {
-  .callback__form > div > input {
+  .callback__form div > input {
     font-size: 16px;
   }
 }
 @media (max-width: 834px) {
-  .callback__form > div > input {
+  .callback__form div > input {
     font-size: 14px;
   }
 }
 @media (max-width: 390px) {
-  .callback__form > div > input {
+  .callback__form div > input {
     font-size: 12px;
   }
 }
 .callback__name input {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 .callback__group {
@@ -2025,17 +2027,18 @@ svg * {
   gap: 12px;
   margin-bottom: 12px;
 }
-.callback__group > input {
+.callback__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.callback__input-wrapper > input {
   flex-grow: 1;
-  flex-basis: 0;
 }
 @media (max-width: 600px) {
   .callback__group {
     flex-wrap: wrap;
     margin-bottom: 12px;
-  }
-  .callback__group > input {
-    flex-basis: auto;
   }
 }
 .callback__policy {
@@ -2047,6 +2050,7 @@ svg * {
   font-family: Mulish;
   font-size: inherit;
   line-height: 120%; /* 28px */
+  width: 100%;
 }
 @media (max-width: 390px) {
   .callback__policy {
@@ -2054,13 +2058,19 @@ svg * {
   }
 }
 .callback__policy label {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
   cursor: pointer;
   position: relative;
 }
 .callback__policy label span {
   padding-left: 42px;
+}
+.callback__policy label span + span {
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 .callback__policy label::before {
   content: "";
@@ -2124,6 +2134,7 @@ svg * {
   }
 }
 .callback__button {
+  margin-top: 20px;
   width: 100%;
 }
 .callback__button button {
@@ -2164,7 +2175,42 @@ svg * {
     padding-top: 60px;
   }
 }
-/*-----------------.categories------------------*/
+/*-----------------.input-error-message------------------*/
+:root {
+  --error-color: #c70700;
+}
+
+.callback__form input.error-input {
+  border-color: var(--error-color);
+}
+
+.input-error-message {
+  display: none;
+  position: relative;
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.input-error-message::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../icons/warning.svg");
+  color: var(--error-color);
+  transform: translateY(-50%);
+}
+
+.input-error-message.show {
+  display: block;
+}
+
 .categories {
   padding-top: 100px;
 }
