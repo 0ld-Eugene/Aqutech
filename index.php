@@ -5,7 +5,7 @@
          <div class="hero__main">
             <div class="hero__box">
                <div class="hero__img">
-                  <img src="./images/hero-image-left.png" alt="">
+                  <img src="./images/hero-image-left.webp" alt="">
                </div>
                <div class="hero__title">
                   <h1 class="title-large">профессиональные Системы очистки воды</h1>
@@ -20,7 +20,7 @@
             </div>
             <div class="hero__image-wrap">
                <div class="hero__image">
-                  <img src="./images/hero-image-right.png" alt="">
+                  <img src="./images/hero-image-right.webp" alt="">
                </div>
             </div>
          </div>
@@ -100,67 +100,64 @@
       </div>
    </section>
    <div class="image-block large">
-      <img src="./images/image-block.png" alt="image-block">
+      <img src="./images/image-block.webp" alt="image-block">
    </div>
 
    <?php include __DIR__ . '/callback-form.php'; ?>
 
    <section class="categories">
       <div class="categories__container">
-         <h2 class="categories__title title-styles">Категории оборудования</h2>
+         <h2 class="categories__title">Категории оборудования</h2>
          <ul class="categories__items">
-            <li class="categories__item">
-               <a class="categories__link" href="#">
-                  <h4 class="categories__i">Оборудование водоподготовки</h4>
-                  <div class="categories__image">
-                     <img src="./images/categories-item.jpg" alt="water-treatment">
+            <li class="categories__item item">
+               <a href="#" class="item__link">
+                  <h4>Установки на основе мембранной очистки</h4>
+                  <div class="item__image">
+                     <img src="./images/membrane.webp" alt="Изображение установки мембранной очистки воды">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <use href="#icon-arrow"></use>
+                     <path
+                        d="M18.3333 -1.63706e-05C17.8913 -1.63706e-05 17.4674 0.175579 17.1548 0.488139C16.8422 0.8007 16.6667 1.22462 16.6667 1.66665V14.3167L2.84998 0.483317C2.53614 0.169477 2.11049 -0.00683594 1.66665 -0.00683594C1.22281 -0.00683593 0.797157 0.169477 0.483317 0.483317C0.169477 0.797157 -0.00683593 1.22281 -0.00683594 1.66665C-0.00683594 2.11049 0.169477 2.53614 0.483317 2.84998L14.3167 16.6667H1.66665C1.22462 16.6667 0.8007 16.8422 0.488139 17.1548C0.175579 17.4674 -1.63706e-05 17.8913 -1.63706e-05 18.3333C-1.63706e-05 18.7753 0.175579 19.1993 0.488139 19.5118C0.8007 19.8244 1.22462 20 1.66665 20H18.3333C18.5511 19.9974 18.7663 19.9521 18.9667 19.8667C19.3739 19.6975 19.6975 19.3739 19.8667 18.9667C19.9521 18.7663 19.9974 18.5511 20 18.3333V1.66665C20 1.22462 19.8244 0.8007 19.5118 0.488139C19.1993 0.175579 18.7753 -1.63706e-05 18.3333 -1.63706e-05Z"
+                        fill="#003666" />
                   </svg>
                </a>
             </li>
-            <li class="categories__item">
-               <a class="categories__link" href="#">
-                  <h4>Оборудование очистки стоков</h4>
-                  <div class="categories__image">
-                     <img src="./images/categories-item.jpg" alt="wastewater-treatment">
+            <li class="categories__item item">
+               <a href="#" class="item__link">
+                  <h4>Установки напорной фильтрации</h4>
+                  <div class="item__image">
+                     <img src="./images/filtration.webp" alt="Изображение установки напорной фильтрации">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <use href="#icon-arrow"></use>
+                     <path
+                        d="M18.3333 -1.63706e-05C17.8913 -1.63706e-05 17.4674 0.175579 17.1548 0.488139C16.8422 0.8007 16.6667 1.22462 16.6667 1.66665V14.3167L2.84998 0.483317C2.53614 0.169477 2.11049 -0.00683594 1.66665 -0.00683594C1.22281 -0.00683593 0.797157 0.169477 0.483317 0.483317C0.169477 0.797157 -0.00683593 1.22281 -0.00683594 1.66665C-0.00683594 2.11049 0.169477 2.53614 0.483317 2.84998L14.3167 16.6667H1.66665C1.22462 16.6667 0.8007 16.8422 0.488139 17.1548C0.175579 17.4674 -1.63706e-05 17.8913 -1.63706e-05 18.3333C-1.63706e-05 18.7753 0.175579 19.1993 0.488139 19.5118C0.8007 19.8244 1.22462 20 1.66665 20H18.3333C18.5511 19.9974 18.7663 19.9521 18.9667 19.8667C19.3739 19.6975 19.6975 19.3739 19.8667 18.9667C19.9521 18.7663 19.9974 18.5511 20 18.3333V1.66665C20 1.22462 19.8244 0.8007 19.5118 0.488139C19.1993 0.175579 18.7753 -1.63706e-05 18.3333 -1.63706e-05Z"
+                        fill="#003666" />
                   </svg>
                </a>
             </li>
-            <li class="categories__item">
-               <a class="categories__link" href="#">
-                  <h4 id="components">Комлектующие и расходные материалы</h4>
-                  <div class="categories__image">
-                     <img src="./images/categories-item.jpg" alt="Components-and-consumables">
+            <li class="categories__item item">
+               <a href="#" class="item__link">
+                  <h4>Установки ультрафиолетового обеззараживания</h4>
+                  <div class="item__image">
+                     <img src="./images/ultraviolet.webp" alt="Изображение установки ультрафиолетового обеззараживания">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <use href="#icon-arrow"></use>
+                     <path
+                        d="M18.3333 -1.63706e-05C17.8913 -1.63706e-05 17.4674 0.175579 17.1548 0.488139C16.8422 0.8007 16.6667 1.22462 16.6667 1.66665V14.3167L2.84998 0.483317C2.53614 0.169477 2.11049 -0.00683594 1.66665 -0.00683594C1.22281 -0.00683593 0.797157 0.169477 0.483317 0.483317C0.169477 0.797157 -0.00683593 1.22281 -0.00683594 1.66665C-0.00683594 2.11049 0.169477 2.53614 0.483317 2.84998L14.3167 16.6667H1.66665C1.22462 16.6667 0.8007 16.8422 0.488139 17.1548C0.175579 17.4674 -1.63706e-05 17.8913 -1.63706e-05 18.3333C-1.63706e-05 18.7753 0.175579 19.1993 0.488139 19.5118C0.8007 19.8244 1.22462 20 1.66665 20H18.3333C18.5511 19.9974 18.7663 19.9521 18.9667 19.8667C19.3739 19.6975 19.6975 19.3739 19.8667 18.9667C19.9521 18.7663 19.9974 18.5511 20 18.3333V1.66665C20 1.22462 19.8244 0.8007 19.5118 0.488139C19.1993 0.175579 18.7753 -1.63706e-05 18.3333 -1.63706e-05Z"
+                        fill="#003666" />
                   </svg>
                </a>
             </li>
-            <li class="categories__item">
-               <a class="categories__link" href="#">
-                  <h4>Обеззараживание</h4>
-                  <div class="categories__image">
-                     <img src="./images/categories-item.jpg" alt="Disinfection">
+            <li class="categories__item item">
+               <a href="#" class="item__link">
+                  <h4>Блоки приготовления и дозирования реагентов</h4>
+                  <div class="item__image">
+                     <img src="./images/reagent.webp" alt="Изображение блоков приготовления и дозирования реагентов">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <use href="#icon-arrow"></use>
-                  </svg>
-               </a>
-            </li>
-            <li class="categories__item">
-               <a class="categories__link" href="#">
-                  <h4>Ёмкостное оборудование</h4>
-                  <div class="categories__image">
-                     <img src="./images/categories-item.jpg" alt="Capacitive-equipment">
-                  </div>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <use href="#icon-arrow"></use>
+                     <path
+                        d="M18.3333 -1.63706e-05C17.8913 -1.63706e-05 17.4674 0.175579 17.1548 0.488139C16.8422 0.8007 16.6667 1.22462 16.6667 1.66665V14.3167L2.84998 0.483317C2.53614 0.169477 2.11049 -0.00683594 1.66665 -0.00683594C1.22281 -0.00683593 0.797157 0.169477 0.483317 0.483317C0.169477 0.797157 -0.00683593 1.22281 -0.00683594 1.66665C-0.00683594 2.11049 0.169477 2.53614 0.483317 2.84998L14.3167 16.6667H1.66665C1.22462 16.6667 0.8007 16.8422 0.488139 17.1548C0.175579 17.4674 -1.63706e-05 17.8913 -1.63706e-05 18.3333C-1.63706e-05 18.7753 0.175579 19.1993 0.488139 19.5118C0.8007 19.8244 1.22462 20 1.66665 20H18.3333C18.5511 19.9974 18.7663 19.9521 18.9667 19.8667C19.3739 19.6975 19.6975 19.3739 19.8667 18.9667C19.9521 18.7663 19.9974 18.5511 20 18.3333V1.66665C20 1.22462 19.8244 0.8007 19.5118 0.488139C19.1993 0.175579 18.7753 -1.63706e-05 18.3333 -1.63706e-05Z"
+                        fill="#003666" />
                   </svg>
                </a>
             </li>
@@ -187,7 +184,7 @@
                </div>
             </div>
             <div class="about__company-image">
-               <img src="./images/about-image.png" alt="About-company">
+               <img src="./images/about-image.webp" alt="About-company">
             </div>
          </div>
          <div class="about__customers customers">
@@ -200,34 +197,37 @@
                <ul class="customers__list swiper-wrapper">
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./images/customers-item.webp" alt="salehard-energo-image">
                      </div>
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
-                     </div>
-                  </li>
-                  <li class="customers__item swiper-slide">
-                     <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
-                     </div>
-                     <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./images/logo-vodokanal.webp" alt="salehard-energo-image">
                      </div>
                   </li>
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./images/logo-gazprom.webp" alt="salehard-energo-image">
                      </div>
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./images/logo-vladim-teplo-gaz.webp" alt="salehard-energo-image">
+                     </div>
+                  </li>
+
+                  <li class="customers__item swiper-slide">
+                     <div class="customers__img">
+                        <img src="./images/logo-ros-mor-port.webp" alt="salehard-energo-image">
+                     </div>
+                     <div class="customers__img">
+                        <img src="./images/logo-eurosib-energo.webp" alt="salehard-energo-image">
                      </div>
                   </li>
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./icons/logo-teplo-energo.svg" alt="salehard-energo-image">
+                        <p>АО «Теплоэнерго»</p>
                      </div>
                      <div class="customers__img">
-                        <img src="./images/customers-item.png" alt="salehard-energo-image">
+                        <img src="./images/logo-spm.webp" alt="salehard-energo-image">
+                        <p>ООО «Сибирь-Полиметаллы»</p>
                      </div>
                   </li>
 
@@ -246,7 +246,7 @@
          <div class="services__content">
             <div class="services__left">
                <div class="services__image">
-                  <img src="./images/about-image.png" alt="">
+                  <img src="./images/services-image.webp" alt="">
                </div>
                <p class="text">
                   Полный спектр услуг по водоподготовке для вашего бизнеса
@@ -324,7 +324,7 @@
       </div>
    </section>
    <div class="image-block small">
-      <img src="./images/image-block.png" alt="image-block">
+      <img src="./images/hero-image-right.webp" alt="image-block">
    </div>
    <!-- <section class="repeat-section bg-color"></section> -->
    <?php include __DIR__ . '/callback-form.php'; ?>

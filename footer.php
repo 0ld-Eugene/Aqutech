@@ -1,30 +1,63 @@
-      <div id="overlay"></div>
-      <footer class="footer">
-         <div class="footer__container">
-            <div class="footer__logo">
-               logo
+<div id="overlay"></div>
+<footer class="footer">
+   <div class="footer__container">
+      <div class="footer__logo">
+         <svg width="118" height="32" viewBox="0 0 118 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+               d="M46.948 26.396C44.692 26.396 42.688 25.952 40.936 25.064C39.184 24.152 37.768 22.88 36.688 21.248C35.608 19.592 34.924 17.648 34.636 15.416H30.172V26H24.592V0.619998H30.172V10.88H34.672C35.008 8.696 35.716 6.812 36.796 5.228C37.876 3.62 39.28 2.384 41.008 1.52C42.736 0.655999 44.716 0.223999 46.948 0.223999C49.492 0.223999 51.7 0.763999 53.572 1.844C55.468 2.924 56.932 4.448 57.964 6.416C58.996 8.36 59.512 10.652 59.512 13.292C59.512 15.932 58.984 18.236 57.928 20.204C56.896 22.172 55.432 23.696 53.536 24.776C51.664 25.856 49.468 26.396 46.948 26.396ZM46.948 21.68C49.084 21.68 50.74 20.948 51.916 19.484C53.116 17.996 53.716 15.932 53.716 13.292C53.716 10.652 53.116 8.6 51.916 7.136C50.74 5.672 49.084 4.94 46.948 4.94C44.836 4.94 43.192 5.672 42.016 7.136C40.84 8.6 40.252 10.652 40.252 13.292C40.252 15.932 40.84 17.996 42.016 19.484C43.192 20.948 44.836 21.68 46.948 21.68ZM63.9318 26V0.619998H75.6318C78.4158 0.619998 80.5638 1.208 82.0758 2.384C83.5878 3.56 84.3438 5.168 84.3438 7.208C84.3438 8.72 83.8878 10.004 82.9758 11.06C82.0878 12.116 80.8638 12.824 79.3038 13.184V12.608C81.1278 12.92 82.5318 13.616 83.5158 14.696C84.5238 15.752 85.0278 17.132 85.0278 18.836C85.0278 21.092 84.2238 22.856 82.6158 24.128C81.0318 25.376 78.8358 26 76.0278 26H63.9318ZM69.2958 21.824H75.3438C76.7358 21.824 77.8038 21.56 78.5478 21.032C79.2918 20.504 79.6638 19.664 79.6638 18.512C79.6638 17.336 79.2918 16.496 78.5478 15.992C77.8038 15.464 76.7358 15.2 75.3438 15.2H69.2958V21.824ZM69.2958 11.06H74.6238C76.0878 11.06 77.1678 10.796 77.8638 10.268C78.5598 9.74 78.9078 8.948 78.9078 7.892C78.9078 6.86 78.5598 6.08 77.8638 5.552C77.1678 5.024 76.0878 4.76 74.6238 4.76H69.2958V11.06ZM89.0343 26V0.619998H93.9663L102.786 20.42H101.634L110.454 0.619998H115.35V26H110.238V8.756H111.678L103.794 26H100.554L92.6343 8.756H94.1463V26H89.0343Z"
+               fill="#FAFCFF" />
+            <path
+               d="M9.20642 1.31175C9.92139 0.551231 11.0847 0.54126 11.8101 1.29183C14.8836 4.47191 22.0938 12.9155 19.4144 19.7235C16.0428 28.2902 4.94039 27.8918 1.58192 19.7235C-1.09252 13.2188 6.14666 4.5664 9.20642 1.31175Z"
+               fill="url(#paint0_linear_233_386)" />
+            <g filter="url(#filter0_d_233_386)">
+               <path
+                  d="M6.03771 21.9857C7.03711 22.9858 9.19873 23.8312 9.03711 23.9858C8.87549 24.1404 6.71962 23.0958 5.76521 22.0981C4.81081 21.1003 4.16813 20.1662 4.32975 20.0116C4.49138 19.857 5.08331 20.9879 6.03771 21.9857Z"
+                  fill="#003666" />
+            </g>
+            <defs>
+               <filter id="filter0_d_233_386" x="0.304688" y="19.9973" width="12.7412" height="12.0039"
+                  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                     result="hardAlpha" />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_386" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_233_386" result="shape" />
+               </filter>
+               <linearGradient id="paint0_linear_233_386" x1="10.5" y1="0" x2="10.5" y2="26"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FAFCFF" />
+                  <stop offset="1" stop-color="#F4F8FF" />
+               </linearGradient>
+            </defs>
+         </svg>
+      </div>
+      <div class="footer__body">
+         <div class="footer__email">
+            <header>Email</header>
+            <a href="#">uf.udin@yandex.ru</a>
+         </div>
+         <div class="footer__inner">
+            <div class="footer__name">
+               <div>ИП Юдин Андрей Вячеславович</div>
+               <div>ОГРНИП 321645100012611</div>
             </div>
-            <div class="footer__body">
-               <div class="footer__email">
-                  <header>Email</header>
-                  <a href="#">uf.udin@yandex.ru</a>
-               </div>
-               <div class="footer__inner">
-                  <div class="footer__name">
-                     <div>ИП Юдин Андрей Вячеславович</div>
-                     <div>ОГРНИП 321645100012611</div>
-                  </div>
-                  <div class="footer__policy">
-                     <header>Политика конфиденциальности</header>
-                     <div>© 2025. Системы очистки воды</div>
-                  </div>
-               </div>
+            <div class="footer__policy">
+               <header>
+                  <a href="#">Политика конфиденциальности</a>
+               </header>
+               <div>© 2025. Системы очистки воды</div>
             </div>
          </div>
-      </footer>
-         </div>
-   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
-   <script src="js/script.js"></script>
+      </div>
+   </div>
+</footer>
+</div>
+<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

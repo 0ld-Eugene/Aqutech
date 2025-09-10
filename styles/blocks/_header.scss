@@ -1,4 +1,3 @@
-/*-----------------.header------------------*/
 //* Кнопка бургера
 .burger {
    display: none;
@@ -97,20 +96,8 @@
 
    &__logo {
       display: flex;
-      span {
-         display: block;
-         width: 100%;
-         // padding: 0 30px;
-         align-self: center;
-         color: var(--accent-color);
-         font-family: Mulish;
-         font-size: 36px;
-         font-style: normal;
-         font-weight: 800;
-         line-height: 105%; /* 37.8px */
-         text-transform: uppercase;
-      }
-      img {
+      align-items: center;
+      svg {
       }
    }
 
@@ -121,7 +108,6 @@
       height: 100%;
       display: flex;
       justify-content: space-between;
-      // position: relative;
       z-index: 5;
    }
    @media (max-width: 1100px) {
@@ -189,8 +175,6 @@
          font-weight: 800;
          line-height: 105%; /* 37.8px */
          text-transform: uppercase;
-      }
-      img {
       }
    }
    .burger__discuss {
@@ -768,37 +752,6 @@
    display: flex;
    gap: clamp(1.313rem, -2.25rem + 3.96vw, 2.5rem);
    align-items: center;
-
-   // .right-panel__search
-
-   // &__search {
-   //    button {
-   //       display: flex;
-   //       justify-content: center;
-   //       align-items: center;
-   //       padding: 12px;
-   //       flex-shrink: 0;
-   //       border-radius: 6px;
-   //       background: var(--secondary-color);
-   //       box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14);
-   //       color: var(--accent-color);
-   //       transition: box-shadow 0.3s ease-in-out;
-   //    }
-   //    @media (max-width: 1050px) {
-   //       button {
-   //          padding: 10px;
-   //       }
-   //    }
-   //    button:hover {
-   //       box-shadow: 0px 0px 2px 1px var(--accent-color);
-   //    }
-   //    button svg {
-   //       transition: transform 0.3s ease-in-out;
-   //    }
-   //    button:hover svg {
-   //       transform: scale(1.1);
-   //    }
-   // }
 
    // .right-panel__phone
 

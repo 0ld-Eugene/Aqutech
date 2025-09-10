@@ -196,3 +196,14 @@ svg * {
 * {
    box-sizing: border-box;
 }
+/*-----------------h2------------------*/
+h2 {
+   color: var(--btn-color);
+   font-weight: 700;
+   line-height: 100%; /* 70px */
+}
+@media (max-width: 500px) {
+   h2 {
+      line-height: 80%;
+   }
+}
