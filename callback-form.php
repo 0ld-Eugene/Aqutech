@@ -2,7 +2,7 @@
    $uniqueId = 'privacyPolicy_' . uniqid();
 ?>
 
-<section class="callback bg-color">
+<section class="callback bg-color" id="anchor-callback-form">
    <div class="callback__container">
       <div class="callback__left-side">
          <p>Оставьте заявку и мы свяжемся с вами</p>
@@ -18,7 +18,7 @@
          </div>
       </div>
       <div class="callback__right-side">
-         <form class="callback__form" id="contact-form" action="#" method="post" novalidate>
+         <form class="callback__form" id="contact-form" action="./callback-handler.php" method="post" novalidate>
             <div class="callback__name">
                <input type="text" name="name" id="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
                <span class="input-error-message" aria-live="polite"></span>

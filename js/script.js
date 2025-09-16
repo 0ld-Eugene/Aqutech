@@ -1,55 +1,68 @@
-// ========== Открытие и закрытие бургер-меню ==========
-const burgerButton = document.querySelector('.burger'); // Кнопка-бургер
-const closeIcon = document.querySelector('.close-svg'); // Иконка закрытия (крестик)
-const menuBody = document.querySelector('.menu__body'); // Меню, которое скрывается/открывается
+// ==================== Бургер-меню с overlay ====================
+document.addEventListener('DOMContentLoaded', function () {
+   const burgerButton = document.querySelector('.burger');      // кнопка-бургер
+   const menuBody = document.querySelector('.menu__body');      // меню
+   const overlay = document.querySelector('.menu__overlay');    // затемнение
 
-// Проверяем, существуют ли все элементы
-if (burgerButton && closeIcon && menuBody) {
-   // Клик по бургеру — открывает/закрывает меню
+   // Проверяем, что все элементы существуют
+   if (!burgerButton || !menuBody || !overlay) return;
+
+   // Функция закрытия меню и overlay
+   function closeMenu() {
+      burgerButton.classList.remove('active');
+      menuBody.classList.remove('active');
+      overlay.classList.remove('active');
+   }
+
+   // Клик по бургеру — открытие/закрытие меню
    burgerButton.addEventListener('click', function (e) {
-      e.stopPropagation(); // Останавливаем всплытие события
-      this.classList.toggle('active');  // Добавляем/убираем класс активного состояния
+      e.stopPropagation();               // предотвращаем всплытие
+      this.classList.toggle('active');   // активное состояние кнопки
       menuBody.classList.toggle('active');
+      overlay.classList.toggle('active');
    });
 
-   // Клик по иконке "X" — закрывает меню
-   closeIcon.addEventListener('click', () => {
-      removeActiveClasses();
-   });
+   // Клик по overlay — закрываем меню
+   overlay.addEventListener('click', closeMenu);
 
-   // Клик вне меню — закрывает меню
-   document.addEventListener('click', function (event) {
-      if (!menuBody.contains(event.target) && event.target !== burgerButton) {
-         removeActiveClasses();
+   // Клик вне меню и кнопки — закрываем меню
+   document.addEventListener('click', function (e) {
+      if (!menuBody.contains(e.target) && e.target !== burgerButton) {
+         closeMenu();
       }
    });
 
-   // Функция: удаляет классы "active"
-   function removeActiveClasses() {
-      burgerButton.classList.remove('active');
-      menuBody.classList.remove('active');
-   }
-}
+   // Опционально: закрытие меню при нажатии Escape
+   document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+   });
 
-// ==================== error-form ===================
+   const menuLink = menuBody.querySelector('.burger__discuss');
+   console.log(menuLink)
+   if (menuLink) {
+      menuLink.addEventListener('click', () => {
+         closeMenu();
+      })
+   }
+});
+
+// ==================== Отправка формы через fetch ===================
 
 document.addEventListener('DOMContentLoaded', function () {
-   const form = document.getElementById('contact-form');
-   const nameInput = document.querySelector('[name="name"]');
-   const phoneInput = document.querySelector('[name="phone"]');
-   const emailInput = document.querySelector('[name="email"]');
-   const policyInput = document.querySelector('[name="privacyPolicy"]');
 
-   // Функция, которая показывает сообщение об ошибке
+   // === Находим все формы с классом .callback__form ===
+   const forms = document.querySelectorAll('.callback__form');
+
+   // === Функции для показа и скрытия ошибок ===
    function showInputError(input, message) {
       const errorSpan = input.parentNode.querySelector('.input-error-message');
       if (errorSpan) {
          errorSpan.textContent = message;
          errorSpan.classList.add('show');
-         input.classList.add('error-input')
+         input.classList.add('error-input');
       }
    }
-   // Функция, которая скрывает сообщение об ошибке
+
    function hideInputError(input) {
       const errorSpan = input.parentNode.querySelector('.input-error-message');
       if (errorSpan) {
@@ -59,56 +72,88 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    }
 
-   form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      let isFormValid = true;
+   // === Обход всех форм ===
+   forms.forEach(form => {
+      form.addEventListener('submit', async function (event) {
+         event.preventDefault(); // отменяем стандартную отправку формы
 
-      // Проверка поля имени
-      if (nameInput.validity.valueMissing) {
-         isFormValid = false;
-         showInputError(nameInput, 'Пожалуйста, введите ваше имя');
-      } else {
-         hideInputError(nameInput)
-      }
+         let isFormValid = true;
 
-      // Проверка поля телефона
-      if (phoneInput.validity.valueMissing) {
-         isFormValid = false;
-         showInputError(phoneInput, 'Это поле обязательно для заполнения');
-      } else if (phoneInput.validity.patternMismatch) {
-         isFormValid = false;
-         showInputError(phoneInput, 'Пожалуйста введите корректный номер телефона')
-      } else {
-         hideInputError(phoneInput);
-      }
+         // Берём поля именно из этой формы
+         const nameInput = form.querySelector('[name="name"]');
+         const phoneInput = form.querySelector('[name="phone"]');
+         const emailInput = form.querySelector('[name="email"]');
+         const policyInput = form.querySelector('[name="privacyPolicy"]');
 
-      // Проверка поля Email
-      if (emailInput.validity.valueMissing) {
-         isFormValid = false;
-         showInputError(emailInput, 'Это поле обязательно для заполнения');
-      } else if (emailInput.validity.typeMismatch) {
-         isFormValid = false;
-         showInputError(emailInput, 'Пожалуйста, введите корректный E-mail');
-      } else {
-         hideInputError(emailInput)
-      }
+         // === Валидация имени ===
+         if (nameInput.validity.valueMissing) {
+            isFormValid = false;
+            showInputError(nameInput, 'Пожалуйста, введите ваше имя');
+         } else {
+            hideInputError(nameInput);
+         }
 
-      // Проверка чекбокса
-      if (!policyInput.checked) {
-         isFormValid = false;
-         showInputError(policyInput, 'Для отправки формы необходимо согласие')
-      } else {
-         hideInputError(policyInput)
-      }
+         // === Валидация телефона ===
+         if (phoneInput.validity.valueMissing) {
+            isFormValid = false;
+            showInputError(phoneInput, 'Это поле обязательно для заполнения');
+         } else if (phoneInput.validity.patternMismatch) {
+            isFormValid = false;
+            showInputError(phoneInput, 'Пожалуйста введите корректный номер телефона');
+         } else {
+            hideInputError(phoneInput);
+         }
 
-      if (isFormValid) {
-         console.log("Форма успешно заполнена. Можно отправлять данные")
-      } else {
-         console.log("Форма заполнена неправильно");
+         // === Валидация email ===
+         if (emailInput.validity.valueMissing) {
+            isFormValid = false;
+            showInputError(emailInput, 'Это поле обязательно для заполнения');
+         } else if (emailInput.validity.typeMismatch) {
+            isFormValid = false;
+            showInputError(emailInput, 'Пожалуйста, введите корректный E-mail');
+         } else {
+            hideInputError(emailInput);
+         }
 
-      }
-   })
-})
+         // === Валидация чекбокса ===
+         if (!policyInput.checked) {
+            isFormValid = false;
+            showInputError(policyInput, 'Для отправки формы необходимо согласие');
+         } else {
+            hideInputError(policyInput);
+         }
+
+         // === Если форма валидна — отправка через fetch ===
+         if (isFormValid) {
+            try {
+               const formData = new FormData(form);
+               const response = await fetch('callback-handler.php', {
+                  method: 'POST',
+                  body: formData
+               });
+
+               const result = await response.text();
+
+               if (result === 'success') {
+                  alert('Заявка успешно отправлена!');
+                  form.reset();
+               } else if (result === 'validation_error') {
+                  alert('Заполните все поля формы');
+               } else {
+                  alert('Ошибка при отправке. Попробуйте позже');
+               }
+            } catch (error) {
+               alert('Ошибка соединения с сервером');
+               console.error(error);
+            }
+         } else {
+            console.log('Форма заполнена неправильно');
+         }
+      });
+   });
+
+});
+
 
 // ========== Инициализация слайдера Swiper ==========
 if (document.querySelector('.swiper')) {

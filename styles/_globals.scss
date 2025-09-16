@@ -61,7 +61,7 @@
 /*----------------.title-styles-------------------*/
 
 .title-styles {
-   color: var(--accent-color);
+   color: var(--btn-color);
    font-family: Mulish;
    font-style: normal;
    font-weight: 700;
@@ -73,7 +73,7 @@
 //*-----.title-large-------
 
 .title-large {
-   color: var(--accent-color);
+   color: var(--btn-color);
    font-family: Mulish;
    font-size: inherit;
    font-style: normal;
@@ -112,7 +112,7 @@
 //*-----.title-small-------
 
 .title-small {
-   color: var(--accent-color);
+   color: var(--btn-color);
    font-weight: 700;
    font-size: inherit;
    line-height: 80%; /* 32px */
@@ -183,7 +183,7 @@
    max-width: 1232px;
    margin-bottom: 24px;
    h1 {
-      color: var(--accent-color);
+      color: var(--btn-color);
       font-family: Mulish;
       font-size: inherit;
       font-style: normal;

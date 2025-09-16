@@ -1,5 +1,5 @@
-<div id="overlay"></div>
-<footer class="footer">
+<!-- <div id="overlay"></div> -->
+<footer id="footer-contacts" class="footer">
    <div class="footer__container">
       <div class="footer__logo">
          <svg width="118" height="32" viewBox="0 0 118 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@
       <div class="footer__body">
          <div class="footer__email">
             <header>Email</header>
-            <a href="#">uf.udin@yandex.ru</a>
+            <a href="mailto:uf.udin@yandex.ru">uf.udin@yandex.ru</a>
          </div>
          <div class="footer__inner">
             <div class="footer__name">

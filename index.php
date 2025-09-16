@@ -13,8 +13,7 @@
                <div class="hero__subtitle hidden-text text">
                   <p>
                      <span>Полностью и надёжно закроем потребности вашего </span>
-                     предприятия в водоочистном
-                     оборудовании.
+                     предприятия в водоочистном оборудовании.
                   </p>
                </div>
             </div>
@@ -110,10 +109,10 @@
          <h2 class="categories__title">Категории оборудования</h2>
          <ul class="categories__items">
             <li class="categories__item item">
-               <a href="#" class="item__link">
+               <a href="./membrane.php" class="item__link">
                   <h4>Установки на основе мембранной очистки</h4>
                   <div class="item__image">
-                     <img src="./images/membrane.webp" alt="Изображение установки мембранной очистки воды">
+                     <img src="./images/membrane.webp" alt="Переход на страницу оборудования на основе мембранной очиски">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path
@@ -126,7 +125,7 @@
                <a href="#" class="item__link">
                   <h4>Установки напорной фильтрации</h4>
                   <div class="item__image">
-                     <img src="./images/filtration.webp" alt="Изображение установки напорной фильтрации">
+                     <img src="./images/filtration.webp" alt="Переход на страницу оборудования напорной фильтрации">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path
@@ -139,7 +138,7 @@
                <a href="#" class="item__link">
                   <h4>Установки ультрафиолетового обеззараживания</h4>
                   <div class="item__image">
-                     <img src="./images/ultraviolet.webp" alt="Изображение установки ультрафиолетового обеззараживания">
+                     <img src="./images/ultraviolet.webp" alt="Переход на страницу оборудования ультрафиолетового обеззараживания">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path
@@ -152,7 +151,7 @@
                <a href="#" class="item__link">
                   <h4>Блоки приготовления и дозирования реагентов</h4>
                   <div class="item__image">
-                     <img src="./images/reagent.webp" alt="Изображение блоков приготовления и дозирования реагентов">
+                     <img src="./images/reagent.webp" alt="Переход на страницу блоков приготовления и дозирования реагентов">
                   </div>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path
@@ -184,7 +183,7 @@
                </div>
             </div>
             <div class="about__company-image">
-               <img src="./images/about-image.webp" alt="About-company">
+               <img src="./images/about-image.webp" alt="">
             </div>
          </div>
          <div class="about__customers customers">
@@ -197,36 +196,36 @@
                <ul class="customers__list swiper-wrapper">
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/customers-item.webp" alt="salehard-energo-image">
+                        <img src="./images/customers-item.webp" alt="Логотип компании СалехардЭнерго">
                      </div>
                      <div class="customers__img">
-                        <img src="./images/logo-vodokanal.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-vodokanal.webp" alt="Логотип компании Домодедовский водоканал">
                      </div>
                   </li>
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/logo-gazprom.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-gazprom.webp" alt="Логотип компании Газпромнефть">
                      </div>
                      <div class="customers__img">
-                        <img src="./images/logo-vladim-teplo-gaz.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-vladim-teplo-gaz.webp" alt="Логотип компании ВладимирТеплоГаз">
                      </div>
                   </li>
 
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./images/logo-ros-mor-port.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-ros-mor-port.webp" alt="Логотип компании Росморпорт">
                      </div>
                      <div class="customers__img">
-                        <img src="./images/logo-eurosib-energo.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-eurosib-energo.webp" alt="Логотип компании ЕвроСибЭнерго">
                      </div>
                   </li>
                   <li class="customers__item swiper-slide">
                      <div class="customers__img">
-                        <img src="./icons/logo-teplo-energo.svg" alt="salehard-energo-image">
+                        <img src="./icons/logo-teplo-energo.svg" alt="Логотип компании АО ТеплоЭнерго">
                         <p>АО «Теплоэнерго»</p>
                      </div>
                      <div class="customers__img">
-                        <img src="./images/logo-spm.webp" alt="salehard-energo-image">
+                        <img src="./images/logo-spm.webp" alt="Логотип компании ООО Сибирь-Полиметаллы">
                         <p>ООО «Сибирь-Полиметаллы»</p>
                      </div>
                   </li>
@@ -324,7 +323,7 @@
       </div>
    </section>
    <div class="image-block small">
-      <img src="./images/hero-image-right.webp" alt="image-block">
+      <img src="./images/hero-image-right.webp" alt="">
    </div>
    <!-- <section class="repeat-section bg-color"></section> -->
    <?php include __DIR__ . '/callback-form.php'; ?>
