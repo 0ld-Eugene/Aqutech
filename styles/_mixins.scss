@@ -2,34 +2,73 @@
    font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
 
-@mixin title-size { 
-   font-size: 70px;
-   @media screen and (max-width: 1440px) {
-      font-size: 54px;
-   }
-   @media screen and (max-width: 834px) {
-      font-size: 40px;
-   }
-   @media screen and (max-width: 600px) {
-      font-size: 36px;
-   }
-   @media screen and (max-width: 390px) {
-      font-size: 22px;
-   }
+//*------------------ДЛЯ FLEX_CONTAINER--------------------
+
+@mixin flex-column($gap) {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: #{$gap}px;
+}
+@mixin flex-row($gap) {
+   display: flex;
+   justify-content: space-between;
+   gap: #{$gap}px;
+}
+//*--------------------ДЛЯ GRID_CONTAINER-------------------
+
+@mixin grid-col($gap, $quantity, $fraction) {
+   display: grid;
+   gap: #{$gap}px;
+   grid-template-columns: repeat(#{$quantity}, #{$fraction}fr);
 }
 
+//*----------------------ДЛЯ ЗАГОЛОВКОВ---------------------
+
+@mixin title-size {
+   font-size: 66px;
+   @media screen and (max-width: 1440px) {
+      font-size: 60px;
+   }
+   @media screen and (max-width: 1100px) {
+      font-size: 45px;
+   }
+   @media screen and (max-width: 768px) {
+      font-size: 36px;
+   }
+   @media screen and (max-width: 550px) {
+      font-size: 24px;
+   }
+}
+@mixin title-styles {
+   color: var(--accent-color);
+   font-style: normal;
+   font-weight: 700;
+   line-height: 105%; /* 69px */
+   text-transform: uppercase;
+}
 @mixin reset-button {
    padding: 0;
    background-color: transparent;
    border: none;
 }
+//*---------------ДЛЯ КАРТОЧЕК С РАЗНЫМИ КАРТИНКАМИ---------------
+@mixin card-bg($image) {
+   background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(#{$image}) center/cover no-repeat;
+}
 
-@mixin flex-center($isInline: false) {
-   @if $isInline {
-      display: inline-flex;
-   } @else {
-      display: flex;
+@mixin basic-text {
+   color: var(--text-color);
+   font-style: normal;
+   font-weight: 500;
+   line-height: 140%; /* 28px */
+   font-size: 20px;
+   @media screen and (max-width: 1440px) {
+      font-size: 14px;
    }
-   justify-content: center;
-   align-items: center;
+   @media screen and (max-width: 1100px) {
+      font-size: 12px;
+   }
 }

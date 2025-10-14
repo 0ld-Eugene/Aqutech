@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/header.php'; ?>
 
 <main class="main">
-   <section class="hero-m">
+   <section class="hero-m hero-indent">
       <div class="hero-m__container">
          <div class="hero-m__inner">
             <div class="hero-m__title">
@@ -9,7 +9,7 @@
                   Установки на основе мембранной очистки
                </h1>
                <div class="hero-m__image">
-                  <img src="./images/hero-image-right.png" alt=" ">
+                  <img src="./images/membrane-image-right.webp" alt="">
                </div>
             </div>
             <div class="hero-m__subtitle">
@@ -35,7 +35,7 @@
       </div>
    </section>
    <div class="image-block image-block-m">
-      <img src="./images/img-block.png" alt="">
+      <img src="./images/image-block-membrane.webp" alt="">
    </div>
    <section class="types">
       <div class="types__container">
@@ -48,7 +48,7 @@
          <ul class="types__items">
             <li class="types__item item-tipes">
                <div class="item-types__image">
-                  <img src="./images/item-types-image.png" alt="">
+                  <img src="./images/microfiltration.webp" alt="">
                </div>
                <div class="item-types__title">
                   <h4>Микрофильтрация (MF) — </h4>
@@ -62,7 +62,7 @@
             </li>
             <li class="types__item item-tipes">
                <div class="item-types__image">
-                  <img src="./images/item-types-image.png" alt="">
+                  <img src="./images/ultrafiltration.webp" alt="">
                </div>
                <div class="item-types__title">
                   <h4>Ультрафильтрация (UF) —</h4>
@@ -76,7 +76,7 @@
             </li>
             <li class="types__item item-tipes">
                <div class="item-types__image">
-                  <img src="./images/item-types-image.png" alt="">
+                  <img src="./images/nanofiltration.webp" alt="">
                </div>
                <div class="item-types__title">
                   <h4>Нанофильтрация (NF) —</h4>
@@ -90,7 +90,7 @@
             </li>
             <li class="types__item item-tipes">
                <div class="item-types__image">
-                  <img src="./images/item-types-image.png" alt="">
+                  <img src="./images/osmos.webp" alt="">
                </div>
                <div class="item-types__title">
                   <h4>Обратный осмос (RO) —</h4>

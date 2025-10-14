@@ -1,0 +1,34 @@
+.expertise {
+   // .expertise__container
+
+   &__container {
+   }
+
+   // .expertise__wrap
+
+   &__wrap {
+      @include flex-column(30);
+   }
+
+   // .expertise__title
+
+   &__title {
+   }
+
+   // .expertise__subtitle
+
+   &__subtitle {
+      max-width: 980px;
+   }
+
+   // .expertise__cards
+
+   &__cards {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   // .expertise__card
+
+   &__card {
+   }
+}

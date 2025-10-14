@@ -1,8 +1,5 @@
 /*-----------------structure------------------*/
 .structure {
-   padding-top: 100px;
-   padding-bottom: 100px;
-   background-color: var(--bg-color-secondary);
 
    // .structure__container
 
@@ -86,15 +83,4 @@
       }
    }
 }
-@media (max-width: 1100px) {
-   .structure {
-      padding-top: 80px;
-      padding-bottom: 80px;
-   }
-}
-@media (max-width: 834px) {
-   .structure {
-      padding-top: 60px;
-      padding-bottom: 60px;
-   }
-}
+

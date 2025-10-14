@@ -2,12 +2,11 @@
 
 .about-image-block {
    height: 900px;
-   background-image: url(../images/about-image-block.png);
-   // Путь к изображению должен соответствовать пути из директории main.css
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
    padding-bottom: 100px;
+
+   background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/image-block.webp) center/cover no-repeat;
 
    // .about-image-block__container
 
@@ -29,6 +28,7 @@
       h3 {
          font-size: 54px;
          font-weight: 700;
+         color: var(--bg-color-secondary);
       }
       p {
          font-size: 24px;

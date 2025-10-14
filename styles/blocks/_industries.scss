@@ -1,6 +1,4 @@
 .industries {
-   padding-top: 100px;
-   padding-bottom: 100px;
    // .industries__container
 
    &__container {
@@ -11,7 +9,6 @@
    &__box {
       display: flex;
       flex-direction: column;
-      gap: 50px;
    }
    &__box + &__box {
       padding-top: 120px;
@@ -47,23 +44,10 @@
       }
    }
 }
-@media (max-width: 1100px) {
-   .industries {
-      padding-top: 80px;
-      padding-bottom: 80px;
-   }
-}
-@media (max-width: 768px) {
-   .industries {
-      padding-top: 40px;
-      padding-bottom: 40px;
-   }
-}
 
 .card {
    display: flex;
    flex-direction: column;
-   gap: 20px;
 
    // .card__logo
 
@@ -97,6 +81,7 @@
    @media (max-width: 768px) {
       &__logo {
          height: 40px;
+         font-size: 26px;
       }
    }
    @media (max-width: 600px) {
@@ -114,14 +99,11 @@
 }
 @media (max-width: 1440px) {
    .card {
-      gap: 15px;
    }
 }
 //----------.mission -------------
 
 .mission {
-   padding-top: 100px;
-   padding-bottom: 100px;
    // .mission__container
 
    &__container {
@@ -207,18 +189,6 @@
       }
    }
 }
-@media (max-width: 1100px) {
-   .mission {
-      padding-top: 80px;
-      padding-bottom: 80px;
-   }
-}
-@media (max-width: 768px) {
-   .mission {
-      padding-top: 60px;
-      padding-bottom: 60px;
-   }
-}
 
 .fz-38 {
    font-size: 38px;
@@ -227,9 +197,6 @@
    .fz-38 {
       font-size: 25px;
    }
-}
-.fz-96 {
-   // font-size: 96px;
 }
 .mw-310 {
    max-width: 310px;

@@ -1,6 +1,5 @@
 .categories {
    // .categories__container
-   padding-top: 100px;
 
    &__container {
       display: flex;
@@ -150,15 +149,5 @@
       &__image {
          max-width: 160px;
       }
-   }
-}
-@media (max-width: 834px) {
-   .categories {
-      padding-top: 80px;
-   }
-}
-@media (max-width: 390px) {
-   .categories {
-      padding-top: 60px;
    }
 }

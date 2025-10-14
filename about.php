@@ -1,14 +1,14 @@
 <?php include __DIR__ . '/header.php'; ?>
 
 <main class="main">
-   <section class="about-hero hero-block">
+   <section class="about-hero hero-indent">
       <div class="about-hero__container">
          <div class="about-hero__title hero-block-title">
             <h1>
                ЮВМ — команда инженеров‑экспертов в сфере подготовки и очистки воды
             </h1>
          </div>
-         <div class="about-hero__subtitle hero-block-subtitle">
+         <div class="about-hero__subtitle hero-text-font">
             <p class="text">
                Стратегический партнёр по созданию, внедрению и долгосрочной поддержке оборудования любой сложности.
             </p>
@@ -59,7 +59,7 @@
          </div>
       </div>
    </section>
-   <section class="structure">
+   <section class="structure bg-gray block-pt block-pb">
       <div class="structure__container">
          <div class="structure__title title-middle">
             <h2>
@@ -106,7 +106,7 @@
          </div>
       </div>
    </div>
-   <section class="resources">
+   <section class="resources block-pt block-pb">
       <div class="resources__container">
          <div class="resources__title title-middle">
             <h2 class="title-middle">

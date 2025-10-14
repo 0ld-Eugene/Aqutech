@@ -5,8 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="color-scheme" content="light">
-   <!-- <link rel="stylesheet" href="styles/main.css?v=<?php echo time();?>"> -->
-   <link rel="stylesheet" href="css/main.css?v=<?php echo time();?>">
+   <!-- <link rel="stylesheet" href="css/main.css?v=<?php echo time();?>"> -->
+   <link rel="stylesheet" href="styles/main.css?v=<?php echo time();?>">
    <!-- добавляет к стилю «временную метку» (чтобы браузер не кэшировал старую версию). -->
    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
    <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -100,23 +100,23 @@
                            </a>
                            <div class="menu__dropdown dropdown-equipment">
                               <ul class="dropdown-equipment__menu">
-                                 <li class="dropdown-equipment__item">
+                                 <li class="dropdown-equipment__item item">
                                     <a href="./membrane.php" class="dropdown-equipment__link">
                                        Мембранная очистка
                                     </a>
                                  </li>
-                                 <li class="dropdown-equipment__item">
-                                    <a href="./in-development.php" class="dropdown-equipment__link">
+                                 <li class="dropdown-equipment__item item">
+                                    <a href="./pressure.php" class="dropdown-equipment__link">
                                        Напорная фильтрация
                                     </a>
                                  </li>
-                                 <li class="dropdown-equipment__item">
-                                    <a href="./in-development.php" class="dropdown-equipment__link">
+                                 <li class="dropdown-equipment__item item">
+                                    <a href="./ultraviolet.php" class="dropdown-equipment__link">
                                        УФ Обеззараживание
                                     </a>
                                  </li>
-                                 <li class="dropdown-equipment__item">
-                                    <a href="./in-development.php" class="dropdown-equipment__link">
+                                 <li class="dropdown-equipment__item item">
+                                    <a href="./reagent.php" class="dropdown-equipment__link">
                                        БДР
                                     </a>
                                  </li>

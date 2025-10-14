@@ -1,9 +1,11 @@
 @import "normalize", "fonts", "mixins", "variables", "globals";
 
-@import "blocks/header", "blocks/hero", "blocks/advantages", "blocks/callback", "blocks/categories", "blocks/about",
-   "blocks/services", "blocks/about-hero", "blocks/structure", "blocks/about-image-block", "blocks/resources",
-   "blocks/partners-hero", "blocks/industries", "blocks/hero-membrane", "blocks/types", "blocks/advantages-m",
-   "blocks/role.scss", "blocks/features-m.scss", "blocks/footer";
+@import "helpers/templates", "blocks/header", "blocks/hero", "blocks/advantages", "blocks/callback",
+   "blocks/categories", "blocks/about", "blocks/services", "blocks/about-hero", "blocks/structure",
+   "blocks/about-image-block", "blocks/resources", "blocks/partners-hero", "blocks/industries", "blocks/hero-membrane",
+   "blocks/types", "blocks/advantages-m", "blocks/role", "blocks/features-m", "blocks/hero-pre", "blocks/downloads",
+   "blocks/part", "blocks/advantages-p", "blocks/features-p", "blocks/management", "blocks/reagent", "blocks/config",
+   "blocks/features-r", "blocks/hero-ultra", "blocks/options", "blocks/expertise", "blocks/footer";
 
 //Скрыть только для webkit
 ::-webkit-scrollbar {
@@ -42,89 +44,6 @@
    }
 }
 
-.wrapper {
-   // background-color: var(--bg-color);
-}
-
-.bg-color {
-   background: var(--bg-color-secondary);
-}
-
-/*-------------.image-block--------------*/
-
-.image-block {
-   width: 100%;
-   height: 240px;
-}
-.image-block img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-@media (min-width: 769px) {
-   .image-block {
-      height: 400px;
-   }
-}
-@media (min-width: 1025px) {
-   .image-block {
-      height: 600px;
-   }
-}
-@media (min-width: 1441px) {
-   .image-block {
-      height: 900px;
-   }
-}
-/*------------------.large-----------------*/
-.large {
-   height: 900px;
-}
-@media (max-width: 1440px) {
-   .large {
-      height: 700px;
-   }
-}
-@media (max-width: 834px) {
-   .large {
-      height: 480px;
-   }
-}
-@media (max-width: 390px) {
-   .large {
-      height: 260px;
-   }
-}
-.small {
-   height: 558px;
-}
-@media (max-width: 834px) {
-   .small {
-      height: 385px;
-   }
-}
-@media (max-width: 390px) {
-   .small {
-      height: 250px;
-   }
-}
-
-// #overlay {
-//    position: fixed;
-//    top: 0;
-//    left: 0;
-//    width: 100vw;
-//    height: 100vw;
-//    background-color: rgba(0, 0, 0, 0.36);
-//    opacity: 0;
-//    transition: opacity 0.3s ease-in-out;
-//    pointer-events: none;
-// }
-// #overlay.active {
-//    opacity: 1;
-//    pointer-events: auto;
-// }
-
 .no-scroll {
    overflow: hidden;
    height: 100vh;
@@ -138,7 +57,7 @@
    display: none;
 }
 .partners-image-block {
-   background-image: url(../images/partners-image-block.png);
+   background-image: url(../images/partners-image-block.webp);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -202,7 +121,6 @@
       padding-top: 40px;
    }
 }
-
 .in-dev {
    padding-top: 30px;
    padding-bottom: 30px;

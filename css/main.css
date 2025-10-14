@@ -1640,6 +1640,10 @@ h2 {
     display: none;
   }
 }
+#categories__anchor {
+  scroll-margin-top: 50px;
+}
+
 /*-----------------.advantages------------------*/
 .advantages {
   padding-top: 100px;
@@ -2510,12 +2514,11 @@ h2 {
 .swiper-button-next,
 .swiper-button-prev {
   top: auto !important;
-  bottom: 0 !important;
+  bottom: 50% !important;
   font-size: 1rem; /* Исходный размер шрифта иконок */
-  color: red; /* Основной цвет иконок */
   opacity: 0.5; /* Полупрозрачность */
   transition: all 0.3s ease-in-out;
-  transform: scale(0.3); /* Масштабируем иконки в половину исходного размера */
+  transform: scale(0.4); /* Масштабируем иконки в половину исходного размера */
 }
 
 /* Эффекты при наведении */
@@ -2527,7 +2530,7 @@ h2 {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: red; /* Красный цвет иконок */
+  color: transparent; /*цвет иконок */
 }
 
 .services {
@@ -2813,16 +2816,16 @@ h2 {
   flex-basis: 50%;
 }
 .about-hero__card--1 {
-  background-image: url(../images/about-solutions.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/card--1.webp) center/cover no-repeat;
 }
 .about-hero__card--2 {
-  background-image: url(../images/about-approach.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/card--2.webp) center/cover no-repeat;
 }
 .about-hero__card--2 p {
   max-width: 461px;
 }
 .about-hero__card--3 {
-  background-image: url(../images/about-beauty.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/card--3.webp) center/cover no-repeat;
 }
 .about-hero__card--3 p {
   max-height: 500px;
@@ -3034,11 +3037,8 @@ h2 {
 /*-----------------.about-image-block------------------*/
 .about-image-block {
   height: 900px;
-  background-image: url(../images/about-image-block.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding-bottom: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/image-block.webp) center/cover no-repeat;
 }
 .about-image-block__container {
   height: 100%;
@@ -3796,11 +3796,9 @@ h2 {
 /*-----------------.capacity------------------*/
 .capacity {
   width: 100%;
-  min-width: 390px;
+  min-width: 350px;
   min-height: 434px;
-  background-image: url(../images/capacity-block.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/capacity-block.webp) center/cover no-repeat;
   display: flex;
   align-items: end;
 }
@@ -4347,7 +4345,7 @@ h2 {
 }
 
 .partners-image-block {
-  background-image: url(../images/partners-image-block.png);
+  background-image: url(../images/partners-image-block.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

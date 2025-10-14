@@ -1,0 +1,27 @@
+.features-p {
+   // .features-p__container
+
+   &__container {
+   }
+
+   // .features-p__title
+
+   &__title {
+   }
+
+   // .features-p__cards
+
+   &__cards {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   @media (max-width: 768px) {
+      &__cards {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+
+   // .features-p__card
+
+   &__card {
+   }
+}

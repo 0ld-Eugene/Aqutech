@@ -126,11 +126,11 @@
 
 .capacity {
    width: 100%;
-   min-width: 390px;
+   min-width: 350px;
    min-height: 434px;
-   background-image: url(../images/capacity-block.png);
-   background-size: cover;
-   background-repeat: no-repeat;
+   background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/capacity-block.webp) center/ cover no-repeat;
    display: flex;
    align-items: end;
 

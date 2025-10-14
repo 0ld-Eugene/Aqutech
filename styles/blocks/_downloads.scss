@@ -1,0 +1,128 @@
+.downloads {
+   // .downloads__container
+
+   &__container {
+      @include flex-column(50);
+   }
+   @media (max-width: 1100px) {
+      &__container {
+         gap: 30px;
+      }
+   }
+
+   // .downloads__title
+
+   &__title {
+      max-width: 1450px;
+      // text-wrap: balance;
+   }
+   @media (max-width: 1200px) {
+      &__title {
+         max-width: 1050px;
+      }
+   }
+   @media (max-width: 768px) {
+      &__title {
+         max-width: 595px;
+      }
+   }
+
+   // .downloads__list
+
+   &__list {
+      @include grid-col(20, 2, 1);
+   }
+   @media (max-width: 550px) {
+      &__list {
+         grid-template-columns: repeat(1, 1fr);
+         gap: 10px;
+         max-width: 90%;
+      }
+   }
+
+   // .downloads__item
+
+   &__item {
+      font-size: 24px;
+      font-weight: 500;
+      position: relative;
+      padding-left: 20px;
+      text-wrap: balance;
+      max-width: 700px;
+      line-height: 120%;
+      p {
+         font-size: inherit;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__item {
+         font-size: 20px;
+      }
+   }
+   @media (max-width: 1100px) {
+      &__item {
+         font-size: 14px;
+         padding-left: 15px;
+      }
+   }
+   @media (max-width: 550px) {
+      &__item {
+         padding-left: 10px;
+      }
+   }
+   &__item::before {
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: var(--text-color);
+   }
+   @media (max-width: 1100px) {
+      &__item::before {
+         width: 5px;
+         height: 5px;
+         top: 5px;
+      }
+   }
+   @media (max-width: 768px) {
+      &__item::before {
+         width: 3px;
+         height: 3px;
+         top: 5px;
+      }
+   }
+
+   // .downloads__text
+
+   &__text {
+      @include flex-column(20);
+      p {
+         line-height: 120%;
+         font-weight: 600;
+         max-width: 1480px;
+      }
+      p + p {
+         font-size: 24px;
+         font-weight: 500;
+         max-width: 1110px;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__text {
+         p + p {
+            font-size: 20px;
+         }
+      }
+   }
+   @media (max-width: 1100px) {
+      &__text {
+         p + p {
+            font-size: 14px;
+         }
+      }
+   }
+}

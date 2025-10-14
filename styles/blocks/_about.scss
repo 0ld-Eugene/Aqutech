@@ -1,7 +1,4 @@
 .about {
-   padding-top: 135px;
-   padding-bottom: 105px;
-
    // .about__container
 
    &__container {
@@ -9,9 +6,14 @@
       flex-direction: column;
       gap: 135px;
    }
-   @media (max-width: 834px) {
+   @media (max-width: 1100px) {
       &__container {
          gap: 80px;
+      }
+   }
+   @media (max-width: 834px) {
+      &__container {
+         gap: 60px;
       }
    }
 
@@ -130,26 +132,6 @@
       }
    }
 }
-
-@media (max-width: 1440px) {
-   .about {
-      padding-top: 100px;
-      padding-bottom: 100px;
-   }
-}
-@media (max-width: 834px) {
-   .about {
-      padding-top: 80px;
-      padding-bottom: 60px;
-   }
-}
-@media (max-width: 390px) {
-   .about {
-      padding-top: 60px;
-      padding-bottom: 60px;
-   }
-}
-
 .customers {
    display: flex;
    flex-direction: column;
@@ -217,12 +199,12 @@
 .swiper-button-next,
 .swiper-button-prev {
    top: auto !important;
-   bottom: 0 !important;
+   bottom: 50% !important;
    font-size: 1rem; /* Исходный размер шрифта иконок */
-   color: red; /* Основной цвет иконок */
+   // color: red; /* Основной цвет иконок */
    opacity: 0.5; /* Полупрозрачность */
    transition: all 0.3s ease-in-out;
-   transform: scale(0.3); /* Масштабируем иконки в половину исходного размера */
+   transform: scale(0.4); /* Масштабируем иконки в половину исходного размера */
 }
 
 /* Эффекты при наведении */
@@ -234,5 +216,5 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-   color: red; /* Красный цвет иконок */
+   color: transparent; /*цвет иконок */
 }

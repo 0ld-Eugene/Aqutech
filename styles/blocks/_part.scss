@@ -1,0 +1,49 @@
+.part {
+   // .part__container
+
+   &__container {
+   }
+
+   // .part__title
+
+   &__title {
+      max-width: 70%;
+   }
+   @media (max-width: 1100px) {
+      &__title {
+         max-width: 90%;
+      }
+   }
+   @media (max-width: 502px) {
+      &__title {
+         max-width: 100%;
+      }
+   }
+
+   // .part__subtitle
+
+   &__subtitle {
+      max-width: 68%;
+      line-height: 120%;
+   }
+
+   // .part__inner
+
+   &__inner {
+   }
+
+   // .part__list
+
+   &__list {
+   }
+
+   // .part__item
+
+   &__item {
+   }
+
+   // .part__image
+
+   &__image {
+   }
+}

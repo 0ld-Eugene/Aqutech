@@ -2,14 +2,14 @@
    $uniqueId = 'privacyPolicy_' . uniqid();
 ?>
 
-<section class="callback bg-color" id="anchor-callback-form">
+<section class="callback bg-gray" id="anchor-callback-form">
    <div class="callback__container">
       <div class="callback__left-side">
          <p>Оставьте заявку и мы свяжемся с вами</p>
          <div class="callback__content">
-            <h4 class="callback__title title-small">
+            <div class="callback__title">
                Ваша компания нуждается в надёжной системе водоподготовки?
-            </h4>
+            </div>
             <p class="callback__text text">
                Мы предлагаем полный спектр услуг и оборудования — от анализа воды и подбора оптимальных решений
                до профессиональной установки и сервисного обслуживания. Ориентируемся на потребности бизнеса

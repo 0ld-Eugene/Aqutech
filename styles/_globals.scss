@@ -33,97 +33,17 @@
    --error-color: #c70700;
 }
 
-/*----------------.title-min-------------------*/
-.title-min {
-   font-size: 22px;
-   h2 {
-      color: var(--btn-color);
-      font-weight: 700;
-      font-size: inherit;
-      line-height: 120%; /* 26.4px */
-   }
-}
-@media (min-width: 769px) {
-   .title-min {
-      font-size: 40px;
-   }
-}
-@media (min-width: 1025px) {
-   .title-min {
-      font-size: 50px;
-   }
-}
-@media (min-width: 1441px) {
-   .title-min {
-      font-size: 54px;
-   }
-}
-/*----------------.title-styles-------------------*/
-
-.title-styles {
-   color: var(--btn-color);
-   font-family: Mulish;
-   font-style: normal;
-   font-weight: 700;
-   line-height: 80%; /* 84px */
-   text-transform: capitalize;
-   font-variant-numeric: lining-nums proportional-nums;
-}
-
-//*-----.title-large-------
-
-.title-large {
-   color: var(--btn-color);
-   font-family: Mulish;
-   font-size: inherit;
-   font-style: normal;
-   font-weight: 700;
-   line-height: 105%; /* 89.25px */
-   text-transform: uppercase;
-}
-@media (max-width: 600px) {
-   .title-large {
-      font-size: 38px;
-   }
-}
-@media (max-width: 480px) {
-   .title-large {
-      font-size: 24px;
-   }
-}
-
-//*-----.title-middle-------
-.title-middle > h2 {
-   color: var(--btn-color);
-   font-size: 54px;
-   font-weight: 700;
-   line-height: 120%; /* 64.8px */
+.hero-base {
+   padding-top: 60px;
 }
 @media (max-width: 1100px) {
-   .title-middle > h2 {
-      font-size: 40px;
+   .hero-base {
+      padding-top: 45px;
    }
 }
-@media (max-width: 768px) {
-   .title-middle > h2 {
-      font-size: 22px;
-   }
-}
-//*-----.title-small-------
-
-.title-small {
-   color: var(--btn-color);
-   font-weight: 700;
-   font-size: inherit;
-   line-height: 80%; /* 32px */
-   font-variant-numeric: lining-nums proportional-nums;
-}
-
-//*-----.text-------
 
 .text {
    color: var(--text-color);
-   font-family: Mulish;
    font-size: inherit;
    font-style: normal;
    font-weight: 500;
@@ -147,7 +67,6 @@
    svg {
       transition: transform 0.3s ease;
    }
-
    background-color: var(--btn-color);
    transition: background 0.4s ease-in-out;
    &:hover {
@@ -157,155 +76,214 @@
       transform: rotate(180deg);
    }
 }
-/*
-*-----------------.hero-block----------------*/
-.hero-block {
-   padding-top: 60px;
-   padding-bottom: 100px;
+//*-----------------block-padding----------------//
+.pb-120 {
+   padding-bottom: 120px;
+}
+@media (max-width: 1440px) {
+   .pb-120 {
+      padding-bottom: 100px;
+   }
 }
 @media (max-width: 1100px) {
-   .hero-block {
-      padding-top: 50px;
+   .pb-120 {
+      padding-bottom: 80px;
    }
 }
 @media (max-width: 768px) {
-   .hero-block {
-      padding-top: 45px;
+   .pb-120 {
       padding-bottom: 60px;
    }
 }
-
-/*
-*-----------------.hero-block-title------------------*/
-
-.hero-block-title {
-   font-size: 66px;
-   max-width: 1232px;
-   margin-bottom: 24px;
-   h1 {
-      color: var(--btn-color);
-      font-family: Mulish;
-      font-size: inherit;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 105%; /* 89.25px */
-      text-transform: uppercase;
-   }
+.pt-120 {
+   padding-top: 120px;
 }
 @media (max-width: 1440px) {
-   .hero-block-title {
-      font-size: 60px;
+   .pt-120 {
+      padding-top: 100px;
    }
 }
 @media (max-width: 1100px) {
-   .hero-block-title {
-      font-size: 40px;
+   .pt-120 {
+      padding-top: 80px;
    }
 }
 @media (max-width: 768px) {
-   .hero-block-title {
-      font-size: 24px;
-      margin-bottom: 12px;
+   .pt-120 {
+      padding-top: 60px;
    }
 }
-
-/*
-*-----------------.hero-block-subtitle---------------*/
-
-.hero-block-subtitle {
-   p {
-      font-family: Mulish;
-      font-size: 32px;
-      line-height: 120%; /* 38.4px */
-      max-width: 969px;
+.pt-100 {
+   padding-top: 100px;
+}
+@media (max-width: 1100px) {
+   .pt-100 {
+      padding-top: 80px;
    }
 }
-@media (max-width: 1440px) {
-   .hero-block-subtitle {
+@media (max-width: 768px) {
+   .pt-100 {
+      padding-top: 50px;
+   }
+}
+.pb-100 {
+   padding-bottom: 100px;
+}
+@media (max-width: 1100px) {
+   .pb-100 {
+      padding-bottom: 80px;
+   }
+}
+@media (max-width: 768px) {
+   .pb-100 {
       padding-bottom: 50px;
-      p {
-         font-size: 24px;
-         max-width: 802px;
-      }
-   }
-}
-@media (max-width: 1100px) {
-   .hero-block-subtitle {
-      padding-bottom: 50px;
-      p {
-         font-size: 16px;
-         max-width: 100%;
-      }
-   }
-}
-@media (max-width: 768px) {
-   .hero-block-subtitle {
-      padding-bottom: 30px;
-      p {
-         font-size: 12px;
-      }
    }
 }
 
-/*
-*-----------------.cards------------------*/
+//*----------------img-block---------------//
+.img-block {
+   // .img-block__inner
 
-.cards {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 40px;
+   &__inner {
+      background-color: #e47676;
+      height: 100%;
+      padding-bottom: 100px;
+   }
+
+   // .img-block__container
+
+   &__container {
+      @include flex-column(50);
+      justify-content: flex-end;
+      height: 100%;
+      p {
+         color: var(--bg-color-secondary);
+         font-size: 54px;
+         font-weight: 700;
+         line-height: 100%; /* 54px */
+         max-width: 90%;
+      }
+      p + p {
+         // color: var(--bg-color-secondary);
+         font-size: 32px;
+         font-weight: 700;
+         line-height: 100%; /* 32px */
+         max-width: 95%;
+         text-wrap: balance;
+      }
+   }
+   @media (max-width: 1440px) {
+      &__container {
+         gap: 30px;
+         p {
+            font-size: 40px;
+         }
+         p + p {
+            font-size: 24px;
+         }
+      }
+   }
+   @media (max-width: 834px) {
+      &__inner {
+         padding-bottom: 80px;
+      }
+      &__container {
+         gap: 16px;
+         p {
+            font-size: 32px;
+         }
+         p + p {
+            font-size: 16px;
+         }
+      }
+   }
+   @media (max-width: 768px) {
+      &__inner {
+         padding-bottom: 50px;
+      }
+      &__container {
+         p {
+            font-size: 24px;
+            max-width: auto;
+         }
+         p + p {
+            font-size: 14px;
+         }
+      }
+   }
+   @media (max-width: 500px) {
+      &__inner {
+         padding-bottom: 30px;
+      }
+      &__container {
+         p {
+            font-size: 22px;
+         }
+         p + p {
+            font-size: 12px;
+         }
+      }
+   }
+}
+//*-------------.image-block--------------*/
+//?-------------mobile-first----------------/
+
+.image-block {
+   width: 100%;
+   height: 240px;
+}
+.image-block img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+@media (min-width: 769px) {
+   .image-block {
+      height: 400px;
+   }
+}
+@media (min-width: 1025px) {
+   .image-block {
+      height: 600px;
+   }
+}
+@media (min-width: 1441px) {
+   .image-block {
+      height: 900px;
+   }
+}
+/*------------------.large-----------------*/
+.large {
+   height: 900px;
 }
 @media (max-width: 1440px) {
-   .cards {
-      gap: 30px;
+   .large {
+      height: 600px;
    }
+}
+@media (max-width: 834px) {
+   .large {
+      height: 400px;
+   }
+}
+@media (max-width: 500px) {
+   .large {
+      height: 300px;
+   }
+}
+.small {
+   height: 558px;
 }
 @media (max-width: 1100px) {
-   .cards {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+   .small {
+      height: 385px;
    }
 }
-
 @media (max-width: 768px) {
-   .cards {
-      gap: 10px;
+   .small {
+      height: 250px;
    }
 }
-@media (max-width: 640px) {
-   .cards {
-      grid-template-columns: repeat(1, 1fr);
-   }
+.bg-gray {
+   background: var(--bg-color-secondary);
 }
-
-/*
-*------------------.card------------------*/
-
-.card {
-   display: flex;
-   flex-direction: column;
-   border-radius: 20px;
-   padding: 30px;
-   font-size: 24px;
-   line-height: 1.3;
-}
-@media (max-width: 1440px) {
-   .card {
-      p {
-         font-size: 16px;
-      }
-   }
-}
-
-@media (max-width: 768px) {
-   .card {
-      gap: 12px;
-      p {
-         font-size: 12px;
-      }
-   }
-}
-
-// [class*="__card"]:not([class*="__cards"]) {
-//    background-color: var(--bg-color-secondary);
-// }

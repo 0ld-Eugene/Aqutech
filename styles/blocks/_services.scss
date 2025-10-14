@@ -1,6 +1,4 @@
 .services {
-   padding-top: 100px;
-   padding-bottom: 100px;
    // .services__container
 
    &__container {
@@ -151,7 +149,7 @@
       border-top: 1px solid #d7d7d7;
       border-bottom: 1px solid #d7d7d7;
       display: flex;
-      transition: background-color 0.2s ease-in; 
+      transition: background-color 0.2s ease-in;
    }
    &__item:hover {
       // background-color: #eef5fc; // На 1% темнее
@@ -174,11 +172,11 @@
          padding-bottom: 12px;
       }
    }
+   &__item a svg {
+      transition: transform 0.2s ease-in-out;
+   }
    &__item a:hover svg {
       transform: rotate(45deg);
-   }
-   &__item a > svg {
-      transition: transform 0.2s ease-in-out;
    }
    &__item span {
       display: inline-flex;
@@ -201,17 +199,9 @@
       &__item span {
          font-size: 12px;
       }
-   }
-}
-@media (max-width: 834px) {
-   .services {
-      padding-top: 80px;
-      padding-bottom: 80px;
-   }
-}
-@media (max-width: 390px) {
-   .services {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      &__item a svg {
+         width: 15px;
+         height: 15px;
+      }
    }
 }

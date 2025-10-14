@@ -1,13 +1,13 @@
 <?php include __DIR__ . '/header.php' ; ?>
 <main class="main">
-   <section class="partners-hero hero-block">
+   <section class="partners-hero hero-indent">
       <div class="partners-hero__container">
          <div class="partners-hero__title hero-block-title">
             <h1>
                Каждый наш проект — это подстройка под процессы, условия и цели заказчика
             </h1>
          </div>
-         <div class="partners-hero__subtitle hero-block-subtitle">
+         <div class="partners-hero__subtitle hero-text-font">
             <p class="text">
                Мы проектируем и сопровождаем системы водоочистки и обеззараживания там, где к воде предъявляют
                максимальные требования — по надёжности, качеству, культуре.
@@ -20,10 +20,10 @@
          <p>Наша практика охватывает ключевые отрасли:</p>
       </div>
    </div>
-   <section class="industries">
+   <section class="industries block-pt block-pb">
       <div class="industries__container">
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — Энергетика и теплоэнергетика:
                </h2>
@@ -79,7 +79,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-gazprom.png" alt="">
+                     <img src="./images/logo-gazprom.webp" alt="">
                   </div>
                   <p class="card__text">
                      Общество с ограниченной ответственностью «Газпромнефть Энергосистемы» (ООО «Газпромнефть
@@ -88,7 +88,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-eurosib-energo.png" alt="">
+                     <img src="./images/logo-eurosib-energo.webp" alt="">
                   </div>
                   <p class="card__text">
                      Торговый дом «Евросибэнерго» (АО «ТД Евросибэнерго»)
@@ -96,7 +96,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/customers-item.png" alt="">
+                     <img src="./images/customers-item.webp" alt="">
                   </div>
                   <p class="card__text">
                      Акционерное общество «Салехардэнерго» (АО «Салехардэнерго»)
@@ -105,7 +105,7 @@
             </ul>
          </div>
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — Транспортная инфраструктура:
                </h2>
@@ -123,7 +123,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-ros-mor-port.png" alt="">
+                     <img src="./images/logo-ros-mor-port.webp" alt="">
                   </div>
                   <p class="card__text">
                      Федеральное государственное унитарное предприятие «Росморпорт» (ФГУП «Росморпорт»)
@@ -132,7 +132,7 @@
             </ul>
          </div>
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — ЖКХ и муниципальные хозяйства:
                </h2>
@@ -140,7 +140,7 @@
             <ul class="industries__cards cards">
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-vodokanal.png" alt="">
+                     <img src="./images/logo-vodokanal.webp" alt="">
                   </div>
                   <p class="card__text">
                      Муниципальное унитарное предприятие «Домодедовский водоканал» (ПУП «Домодедовский водоканал»)
@@ -148,7 +148,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-gazprom-teplo.png" alt="">
+                     <img src="./images/logo-gazprom-teplo.webp" alt="">
                   </div>
                   <p class="card__text">
                      Общество с ограниченной ответственностью «Газпромтеплоэнерго» (ООО «Газпромтеплоэнерго»)
@@ -156,7 +156,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-vladim-teplo-gaz.png" alt="">
+                     <img src="./images/logo-vladim-teplo-gaz.webp" alt="">
                   </div>
                   <p class="card__text">
                      Общество с ограниченной ответственностью «Владимиртеплогаз» (ООО «Владимиртеплогаз»)
@@ -165,7 +165,7 @@
             </ul>
          </div>
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — Горнодобывающая и перерабатывающая промышленность:
                </h2>
@@ -173,7 +173,7 @@
             <ul class="industries__cards cards">
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-spm.png" alt="">
+                     <img src="./images/logo-spm.webp" alt="">
                   </div>
                   <p class="card__text">
                      Общество с ограниченной ответственностью «Сибирь-Полиметаллы» (ООО «Сибирь-Полиметаллы»)
@@ -181,7 +181,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-metaloinvest.png" alt="">
+                     <img src="./images/logo-metaloinvest.webp" alt="">
                   </div>
                   <p class="card__text">
                      Акционерное общество «Лебединский горно-обогатительный комбинат» (АО «Лебединский ГОК»)
@@ -189,7 +189,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-vladim-teplo-gaz.png" alt="">
+                     <img src="./images/logo-vladim-teplo-gaz.webp" alt="">
                   </div>
                   <p class="card__text">
                      Общество с ограниченной ответственностью «Владимиртеплогаз» (ООО «Владимиртеплогаз»)
@@ -198,7 +198,7 @@
             </ul>
          </div>
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — Учреждения медицины, отдыха и восстановления:
                </h2>
@@ -206,7 +206,7 @@
             <ul class="industries__cards cards">
                <li class="industries__card card">
                   <div class="card__logo">
-                     <div class="mw-310">
+                     <div class="mw-310 fz-38">
                         ФГБУ ОК «Бор»
                      </div>
                   </div>
@@ -226,7 +226,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-zelenaya-dolina.png" alt="">
+                     <img src="./images/logo-zelenaya-dolina.webp" alt="">
                   </div>
                   <p class="card__text">
                      Федеральное государственное автономное учреждение «Санаторий ФССП России «Зелёная долина»» (ФГАУ
@@ -235,7 +235,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-social-fond.png" alt="">
+                     <img src="./images/logo-social-fond.webp" alt="">
                   </div>
                   <p class="card__text">
                      ФБУ «Центр реабилитации Фонда пенсионного и социального страхования
@@ -244,7 +244,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-kiricin.png" alt="">
+                     <img src="./images/logo-kiricin.webp" alt="">
                   </div>
                   <p class="card__text">
                      ФГБУ «Детский туберкулёзный санаторий „Кирицы“
@@ -254,7 +254,7 @@
             </ul>
          </div>
          <div class="industries__box">
-            <div class="industries__title title-middle">
+            <div class="industries__title">
                <h2>
                   — Образование и спортивная инфраструктура:
                </h2>
@@ -262,7 +262,7 @@
             <ul class="industries__cards cards">
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-rouor.png" alt="">
+                     <img src="./images/logo-rouor.webp" alt="">
                   </div>
                   <p class="card__text">
                      Государственное бюджетное учреждение Ростовской области «Республиканское училище (колледж)
@@ -271,7 +271,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo_olimpiski.png" alt="">
+                     <img src="./images/logo_olimpiski.webp" alt="">
                   </div>
                   <p class="card__text">
                      Муниципальное автономное учреждение «Дворец спорта „Олимпийский“ имени В.С. Максимова» (МАУ ДС
@@ -280,7 +280,7 @@
                </li>
                <li class="industries__card card">
                   <div class="card__logo">
-                     <img src="./images/logo-start.png" alt="">
+                     <img src="./images/logo-start.webp" alt="">
                   </div>
                   <p class="card__text">
                      Муниципальное автономное учреждение «Шаховской детский оздоровительный комплекс» (МАУ «Шаховской
@@ -321,10 +321,10 @@
          <p class="wide-block">В основе нашей работы — точность, предсказуемость и инженерная культура</p>
       </div>
    </div>
-   <div class="mission">
+   <div class="mission block-pt block-pb">
       <div class="mission__container">
          <div class="mission__text">
-            <div class="mission__title title-middle">
+            <div class="mission__title">
                <h2 class="">
                   Наша цель — создавать надёжные инженерные системы с продолжительным сроком службы, технологическим
                   удобством обслуживания и точным соответствием задачам заказчика.
@@ -336,7 +336,7 @@
             </p>
          </div>
          <div class="mission__image">
-            <img src="./images/mission-image.png" alt="">
+            <img src="./images/mission-image.webp" alt="">
          </div>
       </div>
    </div>
